@@ -1,0 +1,66 @@
+//Text styles//
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' !important;
+}
+
+
+
+.container{
+    height: 100vh;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.container-slice{
+    height: 70vh;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.container-cards{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+
+$font-weights: (
+    'bold': 700,
+    'semi-bold': 600,
+    'regular': 400,
+    'light': 300,
+    'extra-light': 200
+);
+
+$font-size: (
+    'title': 49px,
+    'subtitle': 39px,
+    'h3': 32px,
+    'h4': 25px,
+    'h5': 20px,
+    'texto': 16px
+);
+
+
+
+//color styles//
+
+$primary-color: #3D68E3;
+$secondary-color: #253135;
+$bg-color: #F9FAFC;
+$fonselp-color: #2EABE1;
+$gradient-color: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);
+
+//mixins//
+
+@mixin reset-btn {
+    appearance: inherit;
+    outline: none;
+    border-bottom-style: none;
+    border: inherit; 
+}
+#root{
+    font-family: 'Montserrat' !important;
+    
+}

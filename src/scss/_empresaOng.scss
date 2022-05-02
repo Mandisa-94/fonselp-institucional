@@ -1,0 +1,23 @@
+@import './variants';
+#root{
+    font-family: 'Montserrat';
+}
+
+
+.paragraph-s{
+    width: 60%;
+    margin-bottom: 1%;
+        &_title{
+            width: 60%;
+        }
+}
+.margin-right{
+    margin-right: 2%;
+}
+
+.img-intro{
+    position: absolute;
+    right: 11.9%;
+    top: 49rem;
+    z-index:-1;
+}

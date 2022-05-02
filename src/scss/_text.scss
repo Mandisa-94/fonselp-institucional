@@ -1,0 +1,25 @@
+@import './variants';
+
+.title {
+    font-weight: map-get($font-weights , semi-bold );
+    letter-spacing: 0.02em;
+    font-size: map-get($font-size , title );
+    color: $secondary-color;
+}
+.subtitle{
+    font-weight: map-get($font-weights , semi-bold );
+    font-size: map-get($font-size , subtitle );
+    color: $secondary-color;
+}
+.paragraph{
+    font-weight: map-get($font-weights , regular );
+    letter-spacing: 0.02em;
+    font-size: map-get($font-size , texto );
+    color: $secondary-color;
+}
+.paragraph-s{
+    font-weight: map-get($font-weights , regular );
+    letter-spacing: 0.02em;
+    font-size: map-get($font-size , texto );
+    color: $primary-color;
+}
