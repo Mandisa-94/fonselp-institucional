@@ -627,4 +627,66 @@
 .check-white {
   color: #FFFFFF;
 }
+
+.boxGratisOng {
+  width: 48%;
+  height: 100%;
+  border: 1px solid;
+  border-color: #3D68E3;
+  border-radius: 10px;
+  margin-right: 4%;
+}
+
+.boxGratisOng_title {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.boxGratisOng_title_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.boxPagoOng {
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);
+  border-radius: 10px;
+}
+
+.boxPagoOng_title {
+  margin-top: 10%;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 5%;
+}
+
+.boxPagoOng_title_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 /*# sourceMappingURL=Main.css.map */

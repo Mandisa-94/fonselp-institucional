@@ -4,6 +4,7 @@ import Presentation from './components/Presentation';
 import EmpresaOng from './components/EmpresaOng';
 import HistoriasFonselp from './components/HistoriasFonselp';
 import SoyEmpresa from './components/SoyEmpresa';
+import SoyOng from './components/SoyOng';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <EmpresaOng/>
       <HistoriasFonselp/>
       <SoyEmpresa/>
+      <SoyOng/>
     </>
   );
 }

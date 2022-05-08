@@ -1,0 +1,33 @@
+.boxGratisOng{
+    width: 48%;
+    height: 100%;
+    border: 1px solid;
+    border-color: $primary-color;
+    border-radius: 10px;
+    margin-right: 4%;
+        &_title{
+            margin-top: 10%;
+            margin-bottom: 5%;
+                &_description{
+                    @include flex-center;
+                    flex-direction: column;
+                }
+        }
+}
+
+.boxPagoOng{
+    width: 48%;
+    height: 100%;
+    background: $gradient-color;
+    border-radius: 10px;
+        &_title{
+            margin-top: 10%;
+            font-size: map-get($font-size , h5 );
+            color: $bg-color;
+            margin-bottom: 5%;
+                &_description{
+                    @include flex-center;
+                    flex-direction: column;
+                }
+        }
+}
