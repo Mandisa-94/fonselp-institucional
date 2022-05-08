@@ -35,7 +35,7 @@ $font-weights: (
 
 $font-size: (
     'title': 49px,
-    'subtitle': 39px,
+    'subtitle': 32px,
     'h3': 32px,
     'h4': 25px,
     'h5': 20px,
@@ -48,7 +48,7 @@ $font-size: (
 
 $primary-color: #3D68E3;
 $secondary-color: #253135;
-$bg-color: #F9FAFC;
+$bg-color: #FFFFFF;
 $fonselp-color: #2EABE1;
 $gradient-color: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);
 
@@ -60,7 +60,13 @@ $gradient-color: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0
     border-bottom-style: none;
     border: inherit; 
 }
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 #root{
     font-family: 'Montserrat' !important;
-    
 }

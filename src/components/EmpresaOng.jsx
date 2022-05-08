@@ -5,9 +5,9 @@ import  "../scss/Main.scss";
 function EmpresaOng() {
   return (
         <Box className='container-slice'  display="flex">
-            <Box display="flex" flexDirection={'column'} textAlign={'center'} alignItems={'flex-start'}>
-                <p className='paragraph-s'>¿Cómo funciona?</p>
-                <h2 className='paragraph-s_title subtitle'>Somos el espacio de encuentro entre las empresas y el sector social</h2>
+            <Box display="flex" flexDirection={'column'} textAlign={'center'} alignItems={'flex-start'} className={'boxFunciona'}>
+                <p className='boxFunciona_intro paragraph-s'>¿Cómo funciona?</p>
+                <h2 className='boxFunciona_intro_title subtitle'>Somos el espacio de encuentro entre las empresas y el sector social</h2>
                 <Box display="flex" mt={'4%'}>
                     <button className='btn-soy margin-right'>
                         Soy empresa

@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Presentation from './components/Presentation';
 import EmpresaOng from './components/EmpresaOng';
 import HistoriasFonselp from './components/HistoriasFonselp';
+import SoyEmpresa from './components/SoyEmpresa';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Presentation/>
       <EmpresaOng/>
       <HistoriasFonselp/>
+      <SoyEmpresa/>
     </>
   );
 }

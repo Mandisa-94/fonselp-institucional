@@ -1,0 +1,93 @@
+@import './variants';
+
+.titleBox {
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 2%;
+        &_intro_title{
+            width: 60%;
+            margin-top: 1%;
+            margin-bottom: 0.5%;
+                &_text{
+                    width: 90%;
+                }
+        }
+}
+
+.boxCards{
+    @include flex-center;
+    width: 100%;
+    height: auto;
+}
+
+.boxGratis{
+    width: 48%;
+    height: auto;
+    border: 1px solid;
+    border-color: $primary-color;
+    border-radius: 10px;
+    margin-right: 4%;
+        &_items{
+            @include flex-center;
+            flex-direction: column;
+            margin-top: 2%;
+                &_title{
+                    margin-bottom: 2%;
+                }
+        }
+}
+.boxIcon{
+    width: 80%;
+        p{
+            margin-left: 1%;
+            margin-bottom: 2%;
+        }
+}
+
+.btn-gratis{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.boxPago{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: $gradient-color;
+    border-radius: 10px;
+        &_item{
+            height: 75%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            &_title{
+                font-size: map-get($font-size , h5 );
+                color: $bg-color;
+                    &_description{
+                        @include flex-center;
+                        flex-direction: column;
+                            p{
+                                margin-left: 1%;
+                                margin-bottom: 8%;
+                            }
+                    }
+            }
+        }
+}
+
+.btn-pago{
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.check-blue{
+    color: $primary-color;
+}
+.check-white{
+    color: $bg-color;
+}

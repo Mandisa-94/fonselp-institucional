@@ -18,7 +18,7 @@ function Presentation() {
             </button>
           </div>
           <div item sx={12} md={4} lg={2} xl={2}>
-            <img src="./../assets/image-hero.png" alt=" Ilustracion para soluciones que facilitan el impacto social de las empresas" className='img-hero'/>
+            <img src="../assets/image-hero.png" alt=" Ilustracion para soluciones que facilitan el impacto social de las empresas" className='img-hero'/>
           </div>
         </Box>
   // </div>

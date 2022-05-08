@@ -23,3 +23,18 @@
     font-size: map-get($font-size , texto );
     color: $primary-color;
 }
+
+.text{
+    font-size: map-get($font-size , texto );
+    color: $secondary-color;
+}
+
+.text-w{
+    font-size: map-get($font-size , texto );
+    color: $bg-color;
+}
+
+.h3{
+    font-size: map-get($font-size , h5 );
+    color: $primary-color;    
+}
