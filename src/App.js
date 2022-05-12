@@ -1,18 +1,21 @@
 import './App.css';
-import Header from './components/Header';
 import Presentation from './components/Presentation';
 import EmpresaOng from './components/EmpresaOng';
 import HistoriasFonselp from './components/HistoriasFonselp';
 import SoyEmpresa from './components/SoyEmpresa';
 import SoyOng from './components/SoyOng';
+import NavBar from './components/NavBar';
+import React from 'react';
 
 
 function App() {
+  const onClickRefEmpresaOng = React.useRef(null);
+  
   return (
     <>
-      <Header></Header>
+      <NavBar onClickRefEmpresaOng= {onClickRefEmpresaOng}/>
       <Presentation/>
-      <EmpresaOng/>
+      <EmpresaOng ref = { onClickRefEmpresaOng }/>
       <HistoriasFonselp/>
       <SoyEmpresa/>
       <SoyOng/>

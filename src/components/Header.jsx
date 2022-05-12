@@ -91,6 +91,10 @@ const Header = () => {
                 {page}
               </Button>
             ))}
+            
+            <Button variant="contained" sx={{ my: 2, display: 'block' }} size="medium">Regístrate gratis</Button>
+            <Button variant="outlined" sx={{ my: 2, display: 'block' }} size="medium">COLABORA</Button>
+
           </Box>
         </Toolbar>
       </Container>
