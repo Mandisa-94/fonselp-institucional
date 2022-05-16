@@ -7,6 +7,7 @@ import SoyOng from './components/SoyOng';
 import NavBar from './components/NavBar';
 import React from 'react';
 import Alianzas from './components/Alianzas';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <SoyEmpresa/>
       <SoyOng/>
       <Alianzas/>
+      <Footer/>
     </>
   );
 }
