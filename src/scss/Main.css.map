@@ -13,6 +13,8 @@
         "_historias.scss",
         "_variants.scss",
         "_empresaOng.scss",
+        "_variants.scss",
+        "_carousel.scss",
         "_variants.scss"
     ],
     "names": [],
