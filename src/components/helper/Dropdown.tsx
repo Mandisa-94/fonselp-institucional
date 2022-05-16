@@ -5,21 +5,22 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import { Link } from '@mui/material';
 
+
 const Dropdown = ({data}) =>{
     
-    const { title, sections} = data;
+    const { title, sections } = data;
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
-    const handleClick = (event) => {
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
       setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
       setAnchorEl(null);
     };
+
     return(
-        
-        <div>
+      <div>
         <Button
             sx={{ my: 2, ml: 1, display: 'block' }} 
             size="medium"
@@ -41,7 +42,7 @@ const Dropdown = ({data}) =>{
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-        { sections.map((section, index) => 
+        { sections?.map((section, index) => 
             <MenuItem
                 key={`${section.title}-${index}`}
             >
