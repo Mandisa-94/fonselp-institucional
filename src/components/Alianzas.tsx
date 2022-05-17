@@ -32,7 +32,13 @@ const images: ImagesObj[] = [
 
 const Alianzas = () => {
   return (
-    <Box display="flex" flexDirection={'column'} textAlign={'center'} alignItems={'flex-start'} className={'boxFunciona'}>
+    <Box 
+        display="flex" 
+        flexDirection={'column'} 
+        textAlign={'center'} 
+        alignItems={'flex-start'} 
+        className={'container'}
+    >
         <Box className={'titleBox'}>
                 <p className='titleBox_intro paragraph-s'>Alianzas</p>
                 <h2 className='titleBox_intro_title subtitle'>Conéctate con organizaciones increíbles</h2>

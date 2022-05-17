@@ -137,7 +137,7 @@ const NavBar = ({onClickRefEmpresaOng}) => {
             
             <Button
               onClick={()=>scrollEffect(onClickRefEmpresaOng)}
-              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block' }}
+              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block', borderRadius: '30px'}}
             >
               ¿Cómo funciona?
             </Button>
@@ -148,7 +148,7 @@ const NavBar = ({onClickRefEmpresaOng}) => {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block' }}
+              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block', borderRadius: '30px'}}
             >
               <Link
                     underline="none"

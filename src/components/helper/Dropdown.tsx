@@ -8,7 +8,7 @@ import { Link } from '@mui/material';
 
 const Dropdown = ({data}) =>{
     
-    const { title, sections } = data;
+    const { title, pages } = data;
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -22,7 +22,7 @@ const Dropdown = ({data}) =>{
     return(
       <div>
         <Button
-            sx={{ my: 2, ml: 1, display: 'block' }} 
+            sx={{ my: 2, ml: 1, display: 'block', borderRadius: '30px' }} 
             size="medium"
             id="fade-button"
             aria-controls={open ? 'fade-menu' : undefined}
@@ -42,18 +42,18 @@ const Dropdown = ({data}) =>{
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-        { sections?.map((section, index) => 
+        { pages?.map((page, index) => 
             <MenuItem
-                key={`${section.title}-${index}`}
+                key={`${page.title}-${index}`}
             >
                 <Link
                     underline="none"
                     color="inherit"
-                    href={section.link && section.link}
-                    target={section.link && "_blank"}
-                    rel={section.link && "noreferrer"}
+                    href={page.link && page.link}
+                    target={page.link && "_blank"}
+                    rel={page.link && "noreferrer"}
                 >
-                    {section.title}
+                    {page.title}
                 </Link>
             </MenuItem>
         )}
