@@ -5,7 +5,13 @@ import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
 const SoyOng = () => {
     return (
-        <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'container'}>
+        <Box 
+            display={'flex'} 
+            flexDirection={'column'} 
+            justifyContent={'center'} 
+            alignItems={'center'} 
+            className={'container'}
+        >
             <Box className={'titleBox'}>
                 <p className='titleBox_intro paragraph-s'>Soy ong</p>
                 <h2 className='titleBox_intro_title subtitle'>Conectamos ONG con empresas que puedan apoyar tu causa</h2>

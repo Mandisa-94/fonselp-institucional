@@ -8,6 +8,8 @@ import NavBar from './components/NavBar';
 import React from 'react';
 import SobreFonselp from './components/SobreFonselp';
 import Registrate from './components/Registrate';
+import Alianzas from './components/Alianzas';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
       <SoyOng/>
       <SobreFonselp/>
       <Registrate/>
+      <Alianzas/>
+      <Footer/>
     </>
   );
 }

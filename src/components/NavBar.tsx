@@ -12,9 +12,18 @@ import MenuItem from '@mui/material/MenuItem';
 import Dropdown from './helper/Dropdown';
 import { Link } from '@mui/material';
 
-const colabora = {
+interface PagesObj {
+  [key: string]: any;
+}
+
+type Section = {
+    title: string,
+    pages: PagesObj[]
+  }
+
+const colabora: Section = {
   title: 'Colabora',
-  sections: [
+  pages: [
     {
       title:'Voluntariado',
       link: "https://www.civic.house/contact"
@@ -26,9 +35,9 @@ const colabora = {
   ],
 }
 
-const acercaDe = {
+const acercaDe: Section = {
   title: 'Acerca de',
-  sections: [
+  pages: [
     {
       title:'Fonselp',
       link: '',
@@ -55,12 +64,6 @@ const NavBar = ({onClickRefEmpresaOng}) => {
     setAnchorElNav(null);
   };
 
-
-
-  // const Presentation = useRef(null);
-  // const HistoriasFonselp = useRef(null);
-  // const SoyEmpresa = useRef(null);
-  // const SoyOng = useRef(null);
 
   const scrollEffect = ( targetRef ) =>{
     targetRef.current.scrollIntoView({
@@ -134,7 +137,7 @@ const NavBar = ({onClickRefEmpresaOng}) => {
             
             <Button
               onClick={()=>scrollEffect(onClickRefEmpresaOng)}
-              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block' }}
+              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block', borderRadius: '30px'}}
             >
               ¿Cómo funciona?
             </Button>
@@ -145,7 +148,7 @@ const NavBar = ({onClickRefEmpresaOng}) => {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block' }}
+              sx={{ my: 2,  ml: 1, color: '#253135', display: 'block', borderRadius: '30px'}}
             >
               <Link
                     underline="none"

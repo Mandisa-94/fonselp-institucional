@@ -4,7 +4,11 @@ import  "../scss/Main.scss";
 
 const EmpresaOng = React.forwardRef((props,myref) => {
   return (
-        <Box ref={  myref } className='container-slice'  display="flex">
+        <Box 
+            ref={  myref }
+            className='container-slice'  
+            display="flex"
+        >
             <Box display="flex" flexDirection={'column'} textAlign={'center'} alignItems={'flex-start'} className={'boxFunciona'}>
                 <p className='boxFunciona_intro paragraph-s'>¿Cómo funciona?</p>
                 <h2 className='boxFunciona_intro_title subtitle'>Somos el espacio de encuentro entre las empresas y el sector social</h2>

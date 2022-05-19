@@ -15,7 +15,13 @@ function HistoriasFonselp() {
 
 
   return (
-    <Box  gap={2} display="flex" flexDirection={'column'}  className='container-cards'>
+    <Box  
+        gap={2} 
+        display="flex" 
+        flexDirection={'column'}  
+        className='container-cards'
+     
+    >
         <Box display="flex" justifyContent={'flex-end'} textAlign={'center'}>
             <h2 className='subtitle width'>
                 Historias que se iniciaron con Fonselp
