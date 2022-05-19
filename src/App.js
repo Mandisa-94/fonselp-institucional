@@ -6,6 +6,7 @@ import SoyEmpresa from './components/SoyEmpresa';
 import SoyOng from './components/SoyOng';
 import NavBar from './components/NavBar';
 import React from 'react';
+import SobreFonselp from './components/SobreFonselp';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <HistoriasFonselp/>
       <SoyEmpresa/>
       <SoyOng/>
+      <SobreFonselp/>
     </>
   );
 }

@@ -1,25 +1,5 @@
 @import './variants';
 
-.titleBox {
-    @include flex-center;
-    flex-direction: column;
-    margin-bottom: 2%;
-        &_intro_title{
-            width: 60%;
-            margin-top: 1%;
-            margin-bottom: 0.5%;
-                &_text{
-                    width: 90%;
-                }
-        }
-}
-
-.boxCards{
-    @include flex-center;
-    width: 100%;
-    height: auto;
-}
-
 .boxGratis{
     width: 48%;
     height: auto;

@@ -1,0 +1,21 @@
+@import './variants';
+
+.box-img{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 2%;
+        &_sf1, &_sf2, &_sf3{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_sf2{
+            margin-left: 10%;
+            margin-right: 4%;
+        }
+        
+}
