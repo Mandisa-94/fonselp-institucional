@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1018,5 +1019,101 @@
 .box-img_sf2 {
   margin-left: 10%;
   margin-right: 4%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat' !important;
+}
+
+.container {
+  height: 100vh;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.container-slice {
+  height: 70vh;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.container-cards {
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.titleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2%;
+}
+
+.titleBox_intro_title {
+  width: 60%;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+}
+
+.titleBox_intro_title_text {
+  width: 90%;
+}
+
+.boxCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.box-form {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-form_img {
+  width: 40%;
+  height: auto;
+  margin-right: 10%;
+}
+
+.box-form_img img {
+  width: 100%;
+}
+
+.box-form_inputs {
+  width: 50%;
+}
+
+.box-form_inputs input {
+  width: 100%;
+  margin-bottom: 2%;
 }
 /*# sourceMappingURL=Main.css.map */
