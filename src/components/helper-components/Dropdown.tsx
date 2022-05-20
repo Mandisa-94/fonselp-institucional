@@ -6,7 +6,7 @@ import Fade from '@mui/material/Fade';
 import { Link } from '@mui/material';
 
 
-const Dropdown = ({data}) =>{
+const Dropdown = ({data, onClickRefAlianzas}) =>{
     
     const { title, pages } = data;
 
@@ -18,6 +18,14 @@ const Dropdown = ({data}) =>{
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+
+    const scrollEffect = ( targetRef ) =>{
+      targetRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
 
     return(
       <div>
@@ -46,15 +54,26 @@ const Dropdown = ({data}) =>{
             <MenuItem
                 key={`${page.title}-${index}`}
             >
-                <Link
-                    underline="none"
-                    color="inherit"
-                    href={page.link && page.link}
-                    target={page.link && "_blank"}
-                    rel={page.link && "noreferrer"}
-                >
-                    {page.title}
-                </Link>
+              {
+                page.title === 'Alianzas' ? 
+                    <Link 
+                      onClick={()=>scrollEffect(onClickRefAlianzas)}
+                      color="inherit"
+                      underline="none"
+                    > 
+                      {page.title}
+                    </Link>
+                    :
+                    <Link
+                      href={page.link && page.link}
+                      target={page.link && "_blank"}
+                      rel={page.link && "noreferrer"}
+                      color="inherit"
+                      underline="none"
+                    > 
+                      {page.title}
+                    </Link>
+                }
             </MenuItem>
         )}
         </Menu>

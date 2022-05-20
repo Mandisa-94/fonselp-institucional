@@ -1,5 +1,5 @@
 import React from 'react'
-import UseCarousel from './helper/UseCarousel';
+import UseCarousel from './helper-components/UseCarousel';
 import "../scss/Main.scss";
 import { Box } from '@mui/material';
 
@@ -30,9 +30,10 @@ const images: ImagesObj[] = [
     },
 ]
 
-const Alianzas = () => {
+const Alianzas = React.forwardRef((props,myref) => {
   return (
     <Box 
+        ref={  myref }
         display="flex" 
         flexDirection={'column'} 
         textAlign={'center'} 
@@ -49,6 +50,6 @@ const Alianzas = () => {
       
     </Box>
   )
-}
+})
 
 export default Alianzas

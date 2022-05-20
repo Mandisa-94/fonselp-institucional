@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material';
 import  "../scss/Main.scss";
+import { scrollEffect } from '../utils/helper';
 
 const EmpresaOng = React.forwardRef((props,myref) => {
   return (
@@ -13,10 +14,10 @@ const EmpresaOng = React.forwardRef((props,myref) => {
                 <p className='boxFunciona_intro paragraph-s'>¿Cómo funciona?</p>
                 <h2 className='boxFunciona_intro_title subtitle'>Somos el espacio de encuentro entre las empresas y el sector social</h2>
                 <Box display="flex" mt={'4%'}>
-                    <button className='btn-soy margin-right'>
+                    <button onClick={()=>scrollEffect(props.onClickRefEmpresa)} className='btn-soy margin-right'>
                         Soy empresa
                     </button>
-                    <button className='btn-soy'>
+                    <button onClick={()=>scrollEffect(props.onClickRefOng)} className='btn-soy'>
                         Soy ong
                     </button>
                 </Box>
