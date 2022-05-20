@@ -5,8 +5,9 @@ import { Box } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { scrollEffect } from '../utils/helper';
 
-const Footer = () => {
+const Footer = ({onClickRefEmpresaOng,onClickRefEmpresa, onClickRefOng, onClickRefAlianzas}) => {
   return (
     <footer>
         <Box 
@@ -30,7 +31,7 @@ const Footer = () => {
                         <Box>
                             <Link underline="none"
                                 color="#FFFFFF"
-                                href="/"
+                                href="https://www.facebook.com/fonselp"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -38,7 +39,7 @@ const Footer = () => {
                             </Link>
                             <Link underline="none"
                                 color="#FFFFFF"
-                                href="/"
+                                href="https://twitter.com/FonselpC"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -46,7 +47,7 @@ const Footer = () => {
                             </Link>
                             <Link underline="none"
                                 color="#FFFFFF"
-                                href="/"
+                                href="https://www.linkedin.com/company/fonselp/"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -63,14 +64,14 @@ const Footer = () => {
                             <Grid container >
                                 <Grid item xs={12} sm={6}  >
                                     <Box sx={{ textAlign: 'center' }}>
-                                        <Link  
-                                            underline="none"
+                                        <Link  underline="none"
                                             color="#FFFFFF"
-                                            href="/"
-                                            target="_blank"
-                                            rel="noreferrer"
+                                            onClick={()=>scrollEffect(onClickRefEmpresaOng)}
+                                            style={{ cursor: 'pointer' }}
                                         >
-                                            <p style={{ marginBottom:'8px' }}>¿Cómo funciona?</p>
+                                            <p 
+                                                style={{ marginBottom:'8px' }}
+                                            >¿Cómo funciona?</p>
                                         </Link>
                                         <Link  underline="none"
                                             color="#FFFFFF"
@@ -82,9 +83,8 @@ const Footer = () => {
                                         </Link>
                                         <Link  underline="none"
                                             color="#FFFFFF"
-                                            href="/"
-                                            target="_blank"
-                                            rel="noreferrer"
+                                            onClick={()=>scrollEffect(onClickRefAlianzas)}
+                                            style={{ cursor: 'pointer' }}
                                         >
                                             <p style={{ marginBottom:'8px' }}>Alianzas</p>
                                         </Link>
@@ -102,17 +102,15 @@ const Footer = () => {
                                     <Box sx={{ textAlign: 'center' }}>
                                         <Link  underline="none"
                                             color="#FFFFFF"
-                                            href="/"
-                                            target="_blank"
-                                            rel="noreferrer"
+                                            onClick={()=>scrollEffect(onClickRefEmpresa)}
+                                            style={{ cursor: 'pointer' }}
                                         >
                                             <p style={{ marginBottom:'8px' }}>Soy empresa</p>
                                         </Link>
                                         <Link  underline="none"
                                             color="#FFFFFF"
-                                            href="/"
-                                            target="_blank"
-                                            rel="noreferrer"
+                                            onClick={()=>scrollEffect(onClickRefOng)}
+                                            style={{ cursor: 'pointer' }}
                                         >
                                                 <p style={{ marginBottom:'8px' }}>Soy ONG</p>
                                         </Link>

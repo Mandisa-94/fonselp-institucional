@@ -3,9 +3,10 @@ import { Box } from '@mui/material'
 import  "../scss/Main.scss";
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
-function SoyEmpresa() {
+const SoyEmpresa = React.forwardRef((props,myref) =>{
+
   return (
-    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'container'}>
+    <Box  ref={  myref } display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'container'}>
       <Box className={'titleBox'}>
         <p className='titleBox_intro paragraph-s'>Soy empresa</p>
         <h2 className='titleBox_intro_title subtitle'>Potenciamos el impacto social de las empresas</h2>
@@ -76,6 +77,6 @@ function SoyEmpresa() {
       </Box>
     </Box>
   )
-}
+})
 
 export default SoyEmpresa

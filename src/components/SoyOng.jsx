@@ -3,9 +3,10 @@ import { Box } from '@mui/material'
 import "../scss/Main.scss";
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
-const SoyOng = () => {
+const SoyOng = React.forwardRef((props,myref) => {
     return (
         <Box 
+            ref={  myref }
             display={'flex'} 
             flexDirection={'column'} 
             justifyContent={'center'} 
@@ -62,6 +63,6 @@ const SoyOng = () => {
             </Box>
         </Box>
     )
-}
+})
 
 export default SoyOng

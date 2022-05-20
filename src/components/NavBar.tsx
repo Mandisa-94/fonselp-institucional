@@ -9,8 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Dropdown from './helper/Dropdown';
+import Dropdown from './helper-components/Dropdown';
 import { Link } from '@mui/material';
+import { scrollEffect } from '../utils/helper';
 
 interface PagesObj {
   [key: string]: any;
@@ -53,7 +54,7 @@ const acercaDe: Section = {
   ],
 }
 
-const NavBar = ({onClickRefEmpresaOng}) => {
+const NavBar = ({onClickRefEmpresaOng, onClickRefAlianzas}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -63,14 +64,7 @@ const NavBar = ({onClickRefEmpresaOng}) => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-
-  const scrollEffect = ( targetRef ) =>{
-    targetRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
+  
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#F9FAFC' }}>
@@ -143,7 +137,10 @@ const NavBar = ({onClickRefEmpresaOng}) => {
             </Button>
 
            
-            <Dropdown data={acercaDe}/>
+            <Dropdown 
+              data={acercaDe} 
+              onClickRefAlianzas= {onClickRefAlianzas}
+            />
 
 
             <Button
@@ -178,7 +175,10 @@ const NavBar = ({onClickRefEmpresaOng}) => {
             </Button>
 
           
-            <Dropdown data={colabora}/>
+            <Dropdown 
+              data={colabora}
+              onClickRefAlianzas= {onClickRefAlianzas}
+            />
 
           </Box>
         </Toolbar>

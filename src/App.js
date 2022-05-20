@@ -12,17 +12,32 @@ import Footer from './components/Footer';
 
 function App() {
   const onClickRefEmpresaOng = React.useRef(null);
+  const onClickRefEmpresa = React.useRef(null);
+  const onClickRefOng = React.useRef(null);
+  const onClickRefAlianzas = React.useRef(null);
   
   return (
     <>
-      <NavBar onClickRefEmpresaOng= {onClickRefEmpresaOng}/>
+      <NavBar 
+        onClickRefEmpresaOng= {onClickRefEmpresaOng}
+        onClickRefAlianzas= {onClickRefAlianzas}  
+      />
       <Presentation/>
-      <EmpresaOng ref = { onClickRefEmpresaOng }/>
+      <EmpresaOng 
+        ref = { onClickRefEmpresaOng }
+        onClickRefEmpresa = {onClickRefEmpresa}
+        onClickRefOng = {onClickRefOng}
+      />
       <HistoriasFonselp/>
-      <SoyEmpresa/>
-      <SoyOng/>
-      <Alianzas/>
-      <Footer/>
+      <SoyEmpresa ref = { onClickRefEmpresa }/>
+      <SoyOng ref = { onClickRefOng }/>
+      <Alianzas ref = { onClickRefAlianzas }/>
+      <Footer 
+        onClickRefEmpresaOng= {onClickRefEmpresaOng}
+        onClickRefEmpresa = {onClickRefEmpresa}
+        onClickRefOng = {onClickRefOng}
+        onClickRefAlianzas= {onClickRefAlianzas}
+      />
     </>
   );
 }
