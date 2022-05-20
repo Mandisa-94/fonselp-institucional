@@ -24,8 +24,8 @@ function App() {
       <SoyEmpresa/>
       <SoyOng/>
       <SobreFonselp/>
-      <Registrate/>
       <Alianzas/>
+      <Registrate/>
       <Footer/>
     </>
   );

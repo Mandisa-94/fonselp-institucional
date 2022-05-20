@@ -25,7 +25,7 @@ function Registrate() {
                         <label htmlFor="tipo-org"></label>
                         <input type="text" id='tipo-org' className='input' placeholder='¿Qué tipo de organización eres?' />
                         <label htmlFor="mensaje"></label>
-                        <input type="text" id='mensaje' className='input' placeholder='Mensaje' rows={'10'} cols={'50'}/>
+                        <input type="text" id='mensaje' className='input' placeholder='Mensaje' rows='10' cols='50'/>
                         <Box>
                             <button className='btn-usar-plataforma'>Registrarme gratis</button>
                         </Box>
