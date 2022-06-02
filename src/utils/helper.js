@@ -1,6 +1,6 @@
-export const scrollEffect = ( targetRef ) =>{
+export const scrollEffect = (targetRef) => {
   targetRef.current.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
+    behavior: "smooth",
+    block: "start",
   });
-}
+};
