@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import  "../../scss/Main.scss";
+import { Carousel } from "react-responsive-carousel";
+import "../../scss/Main.scss";
 
-const UseCarousel = ({datos}) => {
-  
+const UseCarousel = ({ datos }) => {
   return (
     <Carousel
       autoPlay
@@ -13,14 +12,13 @@ const UseCarousel = ({datos}) => {
       centerMode
       // dynamicHeight
     >
-      {datos?.map(data=>
+      {datos?.map((data) => (
         <div key={data.title}>
-            <img src={data.src} alt={data.title} style={{  width: '30%' }} />
+          <img src={data.src} alt={data.title} style={{ width: "30%" }} />
         </div>
-      )}
-        
+      ))}
     </Carousel>
-  )
-}
+  );
+};
 
-export default UseCarousel
+export default UseCarousel;

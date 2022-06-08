@@ -1,6 +1,6 @@
-import React from 'react'
-import  "../scss/Main.scss";
-import { Box } from '@mui/material';
+import React from "react";
+import "../scss/Main.scss";
+import { Box } from "@mui/material";
 
 function Presentation() {
   return (
@@ -23,4 +23,4 @@ function Presentation() {
   )
 }
 
-export default Presentation
+export default Presentation;
