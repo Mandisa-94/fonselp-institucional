@@ -6,7 +6,7 @@ function Presentation() {
   return (
     // <div >
     <Box gap={2} display="flex" mt={"8%"} className="container">
-      <div item sx={12} md={8} lg={10} xl={10}>
+      <div sx={12} md={8} lg={10} xl={10}>
         <h1 className="title">
           Soluciones para facilitar el impacto social de las empresas
         </h1>
@@ -17,7 +17,7 @@ function Presentation() {
         </p>
         <button className="btn-registrate">Registrate gratis</button>
       </div>
-      <div item sx={12} md={4} lg={2} xl={2}>
+      <div sx={12} md={4} lg={2} xl={2}>
         <img
           src="../assets/image-hero.png"
           alt=" Ilustracion para soluciones que facilitan el impacto social de las empresas"
