@@ -6,7 +6,7 @@ import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 const SoyEmpresa = React.forwardRef((props,myref) =>{
 
   return (
-    <Box  ref={  myref } display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'container'}>
+    <Box  ref={  myref } display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'.container-auto'}>
       <Box className={'titleBox'}>
         <p className='titleBox_intro paragraph-s'>Soy empresa</p>
         <h2 className='titleBox_intro_title subtitle'>Potenciamos el impacto social de las empresas</h2>
