@@ -2,135 +2,134 @@
 @import './breakpoints';
 @import './variants';
 
-#root{
-    font-family: 'Montserrat';
+#root {
+	font-family: 'Montserrat';
 }
 
-.box-title-p{
-    @include xs  {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    @include sm {
-        width: 100%;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    @include md {
-        width: 100%;
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    @include lg {
-        width: 100%;
-        height: 70%;
-        align-items: flex-start;
-        text-align: start;
-    }
-    @include xl {
-        width: 100%;
-        height: auto;
-        align-items: flex-start;
-        text-align: start;
-    }
+.box-title-p {
+	@include xs {
+		width: 100%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	@include sm {
+		width: 100%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	@include md {
+		width: 100%;
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	@include lg {
+		width: 100%;
+		height: 70%;
+		align-items: flex-start;
+		text-align: start;
+	}
+	@include xl {
+		width: 100%;
+		height: auto;
+		align-items: flex-start;
+		text-align: start;
+	}
 }
 
-.title, .title_p{
-    height: auto;
-    @include xs  {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    @include sm {
-        width: 90%;
-    }
-    @include md {
-        width: 90%;
-    }
-    @include lg {
-        width: 50%;
-    }
-    @include xl {
-        width: 60%;
-    }
+.title,
+.title_p {
+	height: auto;
+	@include xs {
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	@include sm {
+		width: 90%;
+	}
+	@include md {
+		width: 90%;
+	}
+	@include lg {
+		width: 50%;
+	}
+	@include xl {
+		width: 60%;
+	}
 
-        &_p{
-            margin-top: 2%;
-            margin-bottom: 2%;
-        }
+	&_p {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
 }
-.box-img-presentation{
-    @include xs  {
-        width:  100%;
-        height: 40%;
-        align-self: center;
-    }
-    @include sm {
-        width:  80%;
-        height: 50%;
-        align-self: center;
-    }
-    @include md {
-        width:  70%;
-        height: 50%;
-        align-self: center;
-    }
-    @include lg {
-        width: auto;
-        height: auto;
-    }
-    @include xl {
-        width: auto;
-        height: auto;
-    }
-    &_img-hero{
-        @include xs  {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            margin-right: 0px;
-        }
-        @include sm {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            margin-right: 0px;
-            margin-top: 2%;
-        }
-        @include md {
-            height: 100%;
-            width: 100%;
-            display: flex;
-        }
-        @include lg {
-            display: block;
-            position: absolute;
-            right: 5%;
-            top: 18.2rem;
-            width: auto;
-            height: auto;
-        }
-        @include xl {
-            display: block;
-            position: absolute;
-            right: 12%;
-            top: 16.3rem;
-            width: auto;
-            height: auto;
-        }
-    }
+.box-img-presentation {
+	@include xs {
+		width: 100%;
+		height: 40%;
+		align-self: center;
+	}
+	@include sm {
+		width: 80%;
+		height: 50%;
+		align-self: center;
+	}
+	@include md {
+		width: 70%;
+		height: 50%;
+		align-self: center;
+	}
+	@include lg {
+		width: auto;
+		height: auto;
+	}
+	@include xl {
+		width: auto;
+		height: auto;
+	}
+	&_img-hero {
+		@include xs {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			margin-right: 0px;
+		}
+		@include sm {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			margin-right: 0px;
+			margin-top: 2%;
+		}
+		@include md {
+			height: 100%;
+			width: 100%;
+			display: flex;
+		}
+		@include lg {
+			display: block;
+			position: absolute;
+			right: 5%;
+			top: 18.2rem;
+			width: auto;
+			height: auto;
+		}
+		@include xl {
+			display: block;
+			position: absolute;
+			right: 12%;
+			top: 16.3rem;
+			width: auto;
+			height: auto;
+		}
+	}
 }
-
-

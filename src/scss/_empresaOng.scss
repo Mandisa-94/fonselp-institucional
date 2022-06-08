@@ -1,158 +1,156 @@
 @import './variants';
-#root{
-    font-family: 'Montserrat';
+#root {
+	font-family: 'Montserrat';
 }
-.boxFunciona{
-   width: 65%;
-    &_intro{
-        @include xs {
-            width: 100%;
-            margin-bottom: 1%;
-            margin-top: 40%;
-        }
-        @include sm {
-            width: 100%;
-            margin-bottom: 1%;
-            margin-top: 40%;
-        }
-        @include md {
-            width: 100%;
-            margin-bottom: 1%;
-            margin-top: 40%;
-        }
-        @include lg {
-            width: 100%;
-            margin-bottom: 1%;
-            margin-top: 5%;
-        }
-        @include xl {
-            width: 100%;
-            margin-bottom: 1%;
-            margin-top: 5%;
-        }
-        
-            &_title{
-                @include xs {
-                    width: 100%;
-                    height: auto;
-                }
-                @include sm {
-                    width: 100%;
-                    height: auto;
-                }
-                @include md {
-                    width: 100%;
-                    height: auto;
-                }
-                @include lg {
-                    width: 100%;
-                }
-                @include xl {
-                    width: 100%;
-                }
-            }
-    }
+.boxFunciona {
+	width: 65%;
+	&_intro {
+		@include xs {
+			width: 100%;
+			margin-bottom: 1%;
+			margin-top: 40%;
+		}
+		@include sm {
+			width: 100%;
+			margin-bottom: 1%;
+			margin-top: 40%;
+		}
+		@include md {
+			width: 100%;
+			margin-bottom: 1%;
+			margin-top: 40%;
+		}
+		@include lg {
+			width: 100%;
+			margin-bottom: 1%;
+			margin-top: 5%;
+		}
+		@include xl {
+			width: 100%;
+			margin-bottom: 1%;
+			margin-top: 5%;
+		}
+
+		&_title {
+			@include xs {
+				width: 100%;
+				height: auto;
+			}
+			@include sm {
+				width: 100%;
+				height: auto;
+			}
+			@include md {
+				width: 100%;
+				height: auto;
+			}
+			@include lg {
+				width: 100%;
+			}
+			@include xl {
+				width: 100%;
+			}
+		}
+	}
 }
 
-.margin-right{
-    @include xs {
-        margin-bottom: 6%;
-    }
-    @include sm {
-        margin-bottom: 6%;
-    }
-    @include md {
-        margin-bottom: 6%;
-    }
-    @include lg {
-        margin-right: 2%;
-        margin-bottom: 0px;
-    }
-    @include xl {
-        margin-right: 2%;
-        margin-bottom: 0px;
-    }
-    
+.margin-right {
+	@include xs {
+		margin-bottom: 6%;
+	}
+	@include sm {
+		margin-bottom: 6%;
+	}
+	@include md {
+		margin-bottom: 6%;
+	}
+	@include lg {
+		margin-right: 2%;
+		margin-bottom: 0px;
+	}
+	@include xl {
+		margin-right: 2%;
+		margin-bottom: 0px;
+	}
 }
 
-.box-btn{
-    @include xs {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4%;
-    }
-    @include sm {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4%;
-    }
-    @include md {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4%;
-    }
-    @include lg {
-        display: flex;
-        width: 65%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4%;
-    }
-    @include xl {
-        display: flex;
-        width: 65%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4%;
-    }
+.box-btn {
+	@include xs {
+		width: 100%;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+	}
+	@include sm {
+		width: 100%;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+	}
+	@include md {
+		width: 100%;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+	}
+	@include lg {
+		display: flex;
+		width: 65%;
+		height: auto;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+	}
+	@include xl {
+		display: flex;
+		width: 65%;
+		height: auto;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-top: 4%;
+	}
 }
 
-.img-intro{
-    @include xs {
-        display: none;
-    }
-    @include sm {
-        display: none;
-    }
-    @include md {
-        display: none;
-    }
-    @include lg {
-        display: block;
-        position: absolute;
-        right: 4.9%;
-        top: 51rem;
-        z-index:-1;
-    }
-    @include xl {
-        display: block;
-        position: absolute;
-        right: 11.9%;
-        top: 50rem;
-        z-index:-1;
-    }
-    @include xxl {
-        display: block;
-        position: absolute;
-        right: 11.9%;
-        top: 49rem;
-        z-index:-1;
-    }
-    
+.img-intro {
+	@include xs {
+		display: none;
+	}
+	@include sm {
+		display: none;
+	}
+	@include md {
+		display: none;
+	}
+	@include lg {
+		display: block;
+		position: absolute;
+		right: 4.9%;
+		top: 51rem;
+		z-index: -1;
+	}
+	@include xl {
+		display: block;
+		position: absolute;
+		right: 11.9%;
+		top: 50rem;
+		z-index: -1;
+	}
+	@include xxl {
+		display: block;
+		position: absolute;
+		right: 11.9%;
+		top: 49rem;
+		z-index: -1;
+	}
 }

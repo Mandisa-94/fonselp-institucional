@@ -1,23 +1,22 @@
 @import './variants';
 
-
-.box-form{
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-        &_img{
-            width: 40%;
-            height: auto;
-            margin-right: 10%;
-                img{
-                    width: 100%;
-                }
-        }
-        &_inputs{
-            width: 50%;
-                input{
-                    width: 100%;
-                    margin-bottom: 2%;
-                }
-        }
+.box-form {
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	&_img {
+		width: 40%;
+		height: auto;
+		margin-right: 10%;
+		img {
+			width: 100%;
+		}
+	}
+	&_inputs {
+		width: 50%;
+		input {
+			width: 100%;
+			margin-bottom: 2%;
+		}
+	}
 }

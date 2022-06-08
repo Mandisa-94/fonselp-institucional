@@ -2,215 +2,207 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
 @import './breakpoints';
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat' !important;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat' !important;
 }
 
 //mixins//
 
 @mixin reset-btn {
-    appearance: inherit;
-    outline: none;
-    border-bottom-style: none;
-    border: inherit; 
+	appearance: inherit;
+	outline: none;
+	border-bottom-style: none;
+	border: inherit;
 }
 
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
-
-.container{
-    @include xs  {
-        height: 100vh;
-        margin: 2%;
-        flex-direction: column;
-        text-align: center;
-    }
-    @include sm {
-        height: 100vh;
-        margin: 2%;
-        flex-direction: column;
-    }
-    @include md {
-        height: 100vh;
-        flex-direction: column;
-        margin: 2%;
-    }
-    @include lg {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
-        
-    }
-    @include xl {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
-    }
-    @include xxl {
-        height: 90vh;
-        margin: 6% 10% 0% 10%;
-        
-    }
-    
+.container {
+	@include xs {
+		height: 100vh;
+		margin: 2%;
+		flex-direction: column;
+		text-align: center;
+	}
+	@include sm {
+		height: 100vh;
+		margin: 2%;
+		flex-direction: column;
+	}
+	@include md {
+		height: 100vh;
+		flex-direction: column;
+		margin: 2%;
+	}
+	@include lg {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xl {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xxl {
+		height: 90vh;
+		margin: 6% 10% 0% 10%;
+	}
 }
 
-.container-auto{
-    @include xs  {
-        height: auto;
-        margin: 2%;
-        flex-direction: column;
-        text-align: center;
-    }
-    @include sm {
-        height: auto;
-        margin: 2%;
-        flex-direction: column;
-    }
-    @include md {
-        height: auto;
-        flex-direction: column;
-        margin: 2%;
-    }
-    @include lg {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
-        
-    }
-    @include xl {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
-    }
-    @include xxl {
-        height: 90vh;
-        margin: 6% 10% 0% 10%;
-        
-    }
-    
+.container-auto {
+	@include xs {
+		height: auto;
+		margin: 2%;
+		flex-direction: column;
+		text-align: center;
+	}
+	@include sm {
+		height: auto;
+		margin: 2%;
+		flex-direction: column;
+	}
+	@include md {
+		height: auto;
+		flex-direction: column;
+		margin: 2%;
+	}
+	@include lg {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xl {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xxl {
+		height: 90vh;
+		margin: 6% 10% 0% 10%;
+	}
 }
-.container-slice{
-    @include xs  {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    @include sm {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    @include md {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    @include lg {
-        width: 80%;
-        height: 70vh;
-        align-items: center;
-        align-items: flex-start;
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    @include xl {
-        width: 80%;
-        height: 70vh;
-        align-items: center;
-        margin-left: 12%;
-        margin-right: 12%;
-        align-items: flex-start;
-    }
-    
+.container-slice {
+	@include xs {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include sm {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include md {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include lg {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		align-items: flex-start;
+		margin-left: 12%;
+		margin-right: 12%;
+	}
+	@include xl {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		margin-left: 12%;
+		margin-right: 12%;
+		align-items: flex-start;
+	}
 }
-.container-cards{
-    margin-left: 6%;
-    margin-right: 6%;
+.container-cards {
+	margin-left: 6%;
+	margin-right: 6%;
 }
 
 .titleBox {
-    @include flex-center;
-    flex-direction: column;
-    margin-bottom: 2%;
-        &_intro_title{
-            width: 60%;
-            margin-top: 1%;
-            margin-bottom: 0.5%;
-                &_text{
-                    width: 90%;
-                }
-        }
+	@include flex-center;
+	flex-direction: column;
+	margin-bottom: 2%;
+	&_intro_title {
+		width: 60%;
+		margin-top: 1%;
+		margin-bottom: 0.5%;
+		&_text {
+			width: 90%;
+		}
+	}
 }
 
-.boxCards{
-    @include xs  {
-        @include flex-center;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-    @include sm {
-        @include flex-center;
-        width: 100%;
-        height: auto;
-    }
-    @include md {
-        height: 100vh;
-        flex-direction: column;
-        margin: 2%;
-    }
-    @include lg {
-        @include flex-center;
-        width: 100%;
-        height: auto;
-    }
-    @include xl {
-        @include flex-center;
-        width: 100%;
-        height: auto;
-    }
-    @include xxl {
-        @include flex-center;
-        width: 100%;
-        height: auto;
-    }
+.boxCards {
+	@include xs {
+		@include flex-center;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	@include sm {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include md {
+		height: 100vh;
+		flex-direction: column;
+		margin: 2%;
+	}
+	@include lg {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include xl {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include xxl {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
 }
-
 
 $font-weights: (
-    'bold': 700,
-    'semi-bold': 600,
-    'regular': 400,
-    'light': 300,
-    'extra-light': 200
+	'bold': 700,
+	'semi-bold': 600,
+	'regular': 400,
+	'light': 300,
+	'extra-light': 200,
 );
 
 $font-size: (
-    'title': 49px,
-    'subtitle': 32px,
-    'h3': 32px,
-    'h4': 25px,
-    'h5': 20px,
-    'texto': 16px
+	'title': 49px,
+	'subtitle': 32px,
+	'h3': 32px,
+	'h4': 25px,
+	'h5': 20px,
+	'texto': 16px,
 );
-
-
 
 //color styles//
 
-$primary-color: #3D68E3;
+$primary-color: #3d68e3;
 $secondary-color: #253135;
-$bg-color: #FFFFFF;
-$fonselp-color: #2EABE1;
-$gradient-color: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);
-
+$bg-color: #ffffff;
+$fonselp-color: #2eabe1;
+$gradient-color: linear-gradient(
+	113.98deg,
+	#3d68e3 10.35%,
+	rgba(62, 106, 231, 0.55) 151.98%
+);

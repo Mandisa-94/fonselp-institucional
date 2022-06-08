@@ -1,83 +1,82 @@
-
 @import './variants';
 
 .title {
-    font-weight: map-get($font-weights , semi-bold );
-    letter-spacing: 0.02em;
-    color: $secondary-color;
-    @include xs {
-        font-size: 2rem;
-    }
-    @include sm {
-        font-size: 2rem;
-    }
-    @include md {
-        font-size: 2.5rem;
-    }
-    @include lg {
-        font-size: 36px;
-    }
-    @include xl {
-        font-size: map-get($font-size , title );
-    }
+	font-weight: map-get($font-weights, semi-bold);
+	letter-spacing: 0.02em;
+	color: $secondary-color;
+	@include xs {
+		font-size: 2rem;
+	}
+	@include sm {
+		font-size: 2rem;
+	}
+	@include md {
+		font-size: 2.5rem;
+	}
+	@include lg {
+		font-size: 36px;
+	}
+	@include xl {
+		font-size: map-get($font-size, title);
+	}
 }
-.subtitle{
-    font-weight: map-get($font-weights , semi-bold );
-    color: $secondary-color;
-    @include xs {
-        font-size: 1.5rem;
-    }
-    @include sm {
-        font-size: 1.5rem;
-    }
-    @include md {
-        font-size: 2.5rem;
-    }
-    @include lg {
-        font-size: 32px;
-    }
-    @include xl {
-        font-size: map-get($font-size , subtitle );
-    }
+.subtitle {
+	font-weight: map-get($font-weights, semi-bold);
+	color: $secondary-color;
+	@include xs {
+		font-size: 1.5rem;
+	}
+	@include sm {
+		font-size: 1.5rem;
+	}
+	@include md {
+		font-size: 2.5rem;
+	}
+	@include lg {
+		font-size: 32px;
+	}
+	@include xl {
+		font-size: map-get($font-size, subtitle);
+	}
 }
-.paragraph{
-    font-weight: map-get($font-weights , regular );
-    letter-spacing: 0.02em;
-    color: $secondary-color;
-    @include xs {
-        font-size: 1rem;
-    }
-    @include sm {
-        font-size: 1rem;
-    }
-    @include md {
-        font-size: 1rem;
-    }
-    @include lg {
-        font-size: map-get($font-size , texto );
-    }
-    @include xl {
-        font-size: map-get($font-size , texto );
-    }
+.paragraph {
+	font-weight: map-get($font-weights, regular);
+	letter-spacing: 0.02em;
+	color: $secondary-color;
+	@include xs {
+		font-size: 1rem;
+	}
+	@include sm {
+		font-size: 1rem;
+	}
+	@include md {
+		font-size: 1rem;
+	}
+	@include lg {
+		font-size: map-get($font-size, texto);
+	}
+	@include xl {
+		font-size: map-get($font-size, texto);
+	}
 }
-.paragraph-s{
-    font-weight: map-get($font-weights , regular );
-    letter-spacing: 0.02em;
-    font-size: map-get($font-size , texto );
-    color: $primary-color;
-}
-
-.text{
-    font-size: map-get($font-size , texto );
-    color: $secondary-color;
+.paragraph-s {
+	font-weight: map-get($font-weights, regular);
+	letter-spacing: 0.02em;
+	font-size: map-get($font-size, texto);
+	color: $primary-color;
 }
 
-.text-w{
-    font-size: map-get($font-size , texto );
-    color: $bg-color;
+.text {
+	font-size: map-get($font-size, texto);
+	color: $secondary-color;
 }
 
-.h3{
-    font-size: map-get($font-size , h5 );
-    color: $primary-color;    
+.text-w {
+	font-size: map-get($font-size, texto);
+	color: $bg-color;
+}
+
+.h3 {
+	font-size: map-get($font-size, h5);
+	color: $primary-color;
 }
