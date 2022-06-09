@@ -1,21 +1,64 @@
+
 @import './variants';
 
 .title {
     font-weight: map-get($font-weights , semi-bold );
     letter-spacing: 0.02em;
-    font-size: map-get($font-size , title );
     color: $secondary-color;
+    @include xs {
+        font-size: 2rem;
+    }
+    @include sm {
+        font-size: 2rem;
+    }
+    @include md {
+        font-size: 2.5rem;
+    }
+    @include lg {
+        font-size: 36px;
+    }
+    @include xl {
+        font-size: map-get($font-size , title );
+    }
 }
 .subtitle{
     font-weight: map-get($font-weights , semi-bold );
-    font-size: map-get($font-size , subtitle );
     color: $secondary-color;
+    @include xs {
+        font-size: 1.5rem;
+    }
+    @include sm {
+        font-size: 1.5rem;
+    }
+    @include md {
+        font-size: 2.5rem;
+    }
+    @include lg {
+        font-size: 32px;
+    }
+    @include xl {
+        font-size: map-get($font-size , subtitle );
+    }
 }
 .paragraph{
     font-weight: map-get($font-weights , regular );
     letter-spacing: 0.02em;
-    font-size: map-get($font-size , texto );
     color: $secondary-color;
+    @include xs {
+        font-size: 1rem;
+    }
+    @include sm {
+        font-size: 1rem;
+    }
+    @include md {
+        font-size: 1rem;
+    }
+    @include lg {
+        font-size: map-get($font-size , texto );
+    }
+    @include xl {
+        font-size: map-get($font-size , texto );
+    }
 }
 .paragraph-s{
     font-weight: map-get($font-weights , regular );

@@ -2,14 +2,36 @@
 
 
 .btn-registrate{
-    width: 238px;
-    height: 49px;
+    @include xs {
+        width: 90%;
+        height: 12%;
+        font-size: 1.5rem;
+    }
+    @include sm {
+        width: 90%;
+        height: 14%;
+        font-size: 1.5em;
+    }
+    @include md {
+        width: 90%;
+        height: 14%;
+        font-size: 2rem;
+    }
+    @include lg {
+        width: 40%;
+        height: 16%;
+        font-size: 1.5rem;
+    }
+    @include xl {
+        width: 40%;
+        height: 2em;
+        font-size: 1.5rem;
+    }
     @include reset-btn;
     color: $secondary-color;
     border-radius: 30px;
     background: $gradient-color;
     color: $bg-color;
-    font-size: 20px;
     transition: all .5s ease-in-out;
     font-weight: map-get($font-weights , semi-bold );
     cursor: pointer;
@@ -21,14 +43,36 @@
 
 
 .btn-soy{
-    width: 318px;
-    height: 76px;
+    @include xs {
+        width: 90%;
+        height: 58px;
+        font-size: 1.5rem;
+    }
+    @include sm {
+        width: 90%;
+        height: 58px;
+        font-size: 1.5rem;
+    }
+    @include md {
+        width: 90%;
+        height: 16%;
+        font-size: 2rem;
+    }
+    @include lg {
+        width: 318px;
+        height: 76px;
+        font-size: 1.5rem;
+    }
+    @include xl {
+        width: 318px;
+        height: 76px;
+        font-size: 24px;
+    }
     @include reset-btn;
     color: $secondary-color;
     background: linear-gradient(135deg, #FFFFFF 0%, #F2F2F2 100%);
     box-shadow: -7px 7px 14px rgba(224, 224, 224, 0.2), 7px -7px 14px rgba(224, 224, 224, 0.2), -7px -7px 14px rgba(255, 255, 255, 0.9), 7px 7px 18px rgba(224, 224, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5);
     border-radius: 24px;
-    font-size: 24px;
     font-weight: map-get($font-weights , semi-bold );
     cursor: pointer;
         &:hover{
@@ -71,18 +115,7 @@
         }
 }
 
-// .btb-prueba-gratuita{
-//     width: 295px;
-//     height: 48px;
-//     @include reset-btn;
-//     background: $primary-color;
-//     color: $bg-color;
-//     background: linear-gradient(135deg, #406DEE 0%, #3A63D8 100%);
-//     box-shadow: -7px 7px 14px rgba(55, 94, 204, 0.2), 7px -7px 14px rgba(55, 94, 204, 0.2), -7px -7px 14px rgba(67, 114, 250, 0.9), 7px 7px 18px rgba(55, 94, 204, 0.9), inset 1px 1px 2px rgba(67, 114, 250, 0.3), inset -1px -1px 2px rgba(55, 94, 204, 0.5);
-//     border-radius: 10px;
-//     font-size: 20px;
-//     font-weight: map-get($font-weights , semi-bold );
-// }
+
 
 .input{
     width: 545px;

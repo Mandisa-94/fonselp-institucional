@@ -5,25 +5,11 @@ import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 
 const SoyEmpresa = React.forwardRef((props, myref) => {
   return (
-    <Box
-      ref={myref}
-      display={"flex"}
-      flexDirection={"column"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      className={"container"}
-    >
-      <Box className={"titleBox"}>
-        <p className="titleBox_intro paragraph-s">Soy empresa</p>
-        <h2 className="titleBox_intro_title subtitle">
-          Potenciamos el impacto social de las empresas
-        </h2>
-        <p className=" titleBox_intro_title_text text">
-          En nuestra plataforma gratiuta encontrás ong alineadas con los
-          objetivos de sostenibilidad de tu emporesa. Descubre los mejores
-          aliados, ayuda realizando compras responsables, dale una nueva vida a
-          lo que tu empresa ya no necesite.
-        </p>
+    <Box  ref={  myref } display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'.container-auto'}>
+      <Box className={'titleBox'}>
+        <p className='titleBox_intro paragraph-s'>Soy empresa</p>
+        <h2 className='titleBox_intro_title subtitle'>Potenciamos el impacto social de las empresas</h2>
+        <p className=' titleBox_intro_title_text text'>En nuestra plataforma gratiuta encontrás ong alineadas con los objetivos de sostenibilidad de tu emporesa. Descubre los mejores aliados, ayuda realizando compras responsables, dale una nueva vida a lo que tu empresa ya no necesite.</p>
       </Box>
       <Box className={"boxCards"}>
         <Box className={"boxGratis"}>
