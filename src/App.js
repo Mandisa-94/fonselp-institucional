@@ -29,10 +29,10 @@ function App() {
 				onClickRefEmpresa={onClickRefEmpresa}
 				onClickRefOng={onClickRefOng}
 			/>
-			{/* <HistoriasFonselp/> */}
+			<HistoriasFonselp/>
 			<SoyEmpresa ref={onClickRefEmpresa} />
-			{/* <SoyOng ref = { onClickRefOng }/> */}
-			{/* <SobreFonselp/>
+			<SoyOng ref = { onClickRefOng }/>
+			<SobreFonselp/>
       <Alianzas ref = { onClickRefAlianzas }/>
       <Registrate/>
       <Footer 
@@ -40,7 +40,7 @@ function App() {
         onClickRefEmpresa = {onClickRefEmpresa}
         onClickRefOng = {onClickRefOng}
         onClickRefAlianzas= {onClickRefAlianzas}
-      /> */}
+      />
 		</>
 	);
 }

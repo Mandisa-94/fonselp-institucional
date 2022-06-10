@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Link, Grid, Box } from '@mui/material';
+import { Container, Link, Grid, Box, Typography } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { scrollEffect } from '../utils/helper';
+import '../scss/Main.scss';
 
 const Footer = ({
 	onClickRefEmpresaOng,
@@ -14,31 +15,28 @@ const Footer = ({
 	return (
 		<footer>
 			<Box
+				className='footer-container'
 				px={{ xs: 2, sm: 5 }}
 				py={{ xs: 4, sm: 5 }}
-				sx={{
-					marginTop: '20px',
-					padding: '20px',
-					background:
-						'linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);',
-				}}
 			>
 				<Container maxWidth='lg'>
 					<Grid container spacing={5}>
 						<Grid item xs={12} sm={6}>
 							<Box marginBottom={2}>
-								<img
-									src='../assets/FONSELP_BLUE_TRANSBG.png'
-									alt='Logo fonselp'
-									style={{ width: '190px' }}
-								/>
-								<p style={{ color: '#FFFFFF' }}>
+								<Typography className='footer-logo'>
+									<img
+										src='../assets/FONSELP_BLUE_TRANSBG.png'
+										alt='Logo fonselp'
+										style={{ width: '200px' }}
+									/>
+								</Typography>
+								<p className='footer-text' style={{ color: '#FFFFFF' }}>
 									Fonselp opera en Argentina a través de Res Non Verba
 									Asociación Civil, en Colombia a través de Fundación Casa
 									Cívica y en México a través Tecnología sin fines de Lucro AC.
 								</p>
 							</Box>
-							<Box>
+							<Box className='footer-text'>
 								<Link
 									underline='none'
 									color='#FFFFFF'

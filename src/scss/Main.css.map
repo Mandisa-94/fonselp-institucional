@@ -15,6 +15,8 @@
         "_empresaOng.scss",
         "_variants.scss",
         "_carousel.scss",
+        "_footer.scss",
+        "_navbar.scss",
         "_variants.scss"
     ],
     "names": [],

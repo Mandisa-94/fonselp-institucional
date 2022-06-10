@@ -1,0 +1,76 @@
+@import './variants';
+
+.footer-container {
+    margin-top: 2%;
+    padding: 1%;
+    background: linear-gradient(113.98deg, #3D68E3 10.35%, rgba(62, 106, 231, 0.55) 151.98%);
+
+    @include xs {
+        font-size: 1rem;
+    }
+
+    @include sm {
+        font-size: 1.1em;
+    }
+
+    @include md {
+        font-size: 1rem;
+    }
+
+    @include lg {
+        font-size: 1.1rem;
+    }
+
+    @include xl {
+        font-size: 1.1rem;
+    }
+}
+
+.footer-logo{
+    @include xs {
+            display: flex;
+            justify-content: center;
+    }
+
+    @include sm {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include md {
+        display: flex;
+        justify-content: left;
+    }
+    @include lg {
+        display: flex;
+        justify-content: left;
+    }
+
+    @include xl {
+        display: flex;
+        justify-content: left;
+    }
+
+}
+
+.footer-text{
+    @include xs {
+        text-align: center;
+    }
+
+    @include sm {
+        text-align: center;
+    }
+
+    @include md {
+        text-align: left;
+    }
+
+    @include lg {
+        text-align: left;
+    }
+
+    @include xl {
+        text-align: left;
+    }
+}

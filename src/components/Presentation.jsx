@@ -4,8 +4,9 @@ import { Box } from '@mui/material';
 
 function Presentation() {
 	return (
-		<Box display='flex' mt={'8%'} className='container'>
-			<Box className='box-title-p'>
+		// <div >
+		<Box gap={2} display='flex' mt={'8%'} className='container'>
+			<div sx={12} md={8} lg={10} xl={10}>
 				<h1 className='title'>
 					Soluciones para facilitar el impacto social de las empresas
 				</h1>
@@ -15,15 +16,16 @@ function Presentation() {
 					organizaciones que están cambiando el mundo.
 				</p>
 				<button className='btn-registrate'>Registrate gratis</button>
-			</Box>
-			<Box className='box-img-presentation'>
+			</div>
+			<div sx={12} md={4} lg={2} xl={2}>
 				<img
 					src='../assets/image-hero.png'
 					alt=' Ilustracion para soluciones que facilitan el impacto social de las empresas'
-					className='box-img-presentation_img-hero'
+					className='img-hero'
 				/>
-			</Box>
+			</div>
 		</Box>
+		// </div>
 	);
 }
 

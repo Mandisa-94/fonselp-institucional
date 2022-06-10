@@ -10,7 +10,13 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Dropdown from './helper-components/Dropdown';
-import { Link } from '@mui/material';
+import {
+	Drawer,
+	Link,
+	ListItem,
+	ListItemButton,
+	ListItemText,
+} from '@mui/material';
 import { scrollEffect } from '../utils/helper';
 
 interface PagesObj {
@@ -55,14 +61,9 @@ const acercaDe: Section = {
 };
 
 const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
-	const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-	const handleOpenNavMenu = event => {
-		setAnchorElNav(event.currentTarget);
-	};
-
-	const handleCloseNavMenu = () => {
-		setAnchorElNav(null);
+	const [state, setState] = React.useState(false);
+	const toggleDrawer = () => {
+		setState(!state);
 	};
 
 	return (
@@ -88,45 +89,64 @@ const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
 							display: { xs: 'flex', md: 'none', color: '#253135' },
 						}}
 					>
-						<IconButton
-							size='large'
-							aria-label='account of current user'
-							aria-controls='menu-appbar'
-							aria-haspopup='true'
-							onClick={handleOpenNavMenu}
-							color='inherit'
-						>
+						<IconButton size='large' onClick={toggleDrawer} color='inherit'>
 							<MenuIcon />
 						</IconButton>
-						<Menu
-							id='menu-appbar'
-							anchorEl={anchorElNav}
-							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'left',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'left',
-							}}
-							open={Boolean(anchorElNav)}
-							onClose={handleCloseNavMenu}
-							sx={{
-								display: { xs: 'block', md: 'none' },
+						<Drawer
+							anchor='left'
+							open={state}
+							onClose={toggleDrawer}
+							PaperProps={{
+								sx: {
+									background: 'linear-gradient(#3D68E3, rgba(62, 106, 231))',
+									color: 'white',
+								},
 							}}
 						>
-							<MenuItem onClick={handleCloseNavMenu}>
-								<Typography textAlign='center'>¿Cómo funciona?</Typography>
-								<Typography textAlign='center'>Acerca de</Typography>
-								<Typography textAlign='center'>Iniciar Sesión</Typography>
-							</MenuItem>
-						</Menu>
+							<ListItem
+								onClick={() => {
+									toggleDrawer();
+									setTimeout(() => scrollEffect(onClickRefEmpresaOng), 100);
+								}}
+							>
+								<ListItemButton>
+									<ListItemText primary='¿Cómo funciona?' />
+								</ListItemButton>
+							</ListItem>
+							<ListItem
+								onClick={() => {
+									toggleDrawer();
+								}}
+							>
+								<ListItemButton>
+									<ListItemText primary='Acerca de' />
+								</ListItemButton>
+							</ListItem>
+							<ListItem
+								onClick={() => {
+									toggleDrawer();
+								}}
+							>
+								<ListItemButton>
+									<Link
+										className='navbar-burguer'
+										underline='none'
+										color='inherit'
+										href='https://app.fonselp.com/login'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<ListItemText primary='Iniciar sesión' />
+									</Link>
+								</ListItemButton>
+							</ListItem>
+						</Drawer>
 					</Box>
 					<Typography
 						variant='h6'
 						noWrap
 						component='div'
+						paddingRight={3}
 						sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
 					>
 						<img
@@ -162,7 +182,6 @@ const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
 						<Dropdown data={acercaDe} onClickRefAlianzas={onClickRefAlianzas} />
 
 						<Button
-							onClick={handleCloseNavMenu}
 							sx={{
 								my: 2,
 								ml: 1,
