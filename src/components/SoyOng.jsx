@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import "../scss/Main.scss";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 
+// eslint-disable-next-line react/display-name
 const SoyOng = React.forwardRef((props, myref) => {
   return (
     <Box
@@ -11,7 +12,7 @@ const SoyOng = React.forwardRef((props, myref) => {
       flexDirection={"column"}
       justifyContent={"center"}
       alignItems={"center"}
-      className={"container"}
+      className={"container-auto"}
     >
       <Box className={"titleBox"}>
         <p className="titleBox_intro paragraph-s">Soy ong</p>
@@ -20,12 +21,12 @@ const SoyOng = React.forwardRef((props, myref) => {
         </h2>
         <p className=" titleBox_intro_title_text text">
           Potencia el impacto social de tu organización con nuestra plataforma
-          gratuita dándole visibilidad a tu organizacion con empresas de toda
-          latinoamérica. Gestiona el ciclo de voluntariado minimizando el tiempo
-          de tu equipo de RSE desde un abono mensual.
+          gratuita dándole visibilidad con empresas de toda latinoamérica.
+          Gestiona el ciclo de voluntariado con herramientas para maximizar la
+          eficiencia del equipo desde un abono mensual.
         </p>
       </Box>
-      <Box className={"boxCards"}>
+      <Box className={"box-cards-ong"}>
         <Box className={"boxGratisOng"}>
           <h3 className={"h3 boxGratisOng_title"}>Conectar con empresas</h3>
           <Box className={"boxGratisOng_title_description"}>
@@ -55,7 +56,7 @@ const SoyOng = React.forwardRef((props, myref) => {
         </Box>
 
         <Box className={"boxPagoOng"}>
-          <h3 className={"boxPagoOng_title"}>Voluntariado</h3>
+          <h3 className={"boxPagoOng_title h3-w"}>Voluntariado</h3>
           <Box className={"boxPagoOng_title_description"}>
             <Box display={"flex"} textAlign={"left"} className={"boxIcon"}>
               <CheckOutlinedIcon className="check-white" />
@@ -74,7 +75,7 @@ const SoyOng = React.forwardRef((props, myref) => {
             </Box>
           </Box>
           <Box>
-            <button className={"btn-usar-plataforma_blue btn-pago"}>
+            <button className={"btn-usar-plataforma_blue btn-pago-ong"}>
               Comenzar prueba gratuita
             </button>
           </Box>

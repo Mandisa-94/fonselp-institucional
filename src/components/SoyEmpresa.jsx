@@ -3,17 +3,32 @@ import { Box } from "@mui/material";
 import "../scss/Main.scss";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 
+// eslint-disable-next-line react/display-name
 const SoyEmpresa = React.forwardRef((props, myref) => {
   return (
-    <Box  ref={  myref } display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} className={'.container-auto'}>
-      <Box className={'titleBox'}>
-        <p className='titleBox_intro paragraph-s'>Soy empresa</p>
-        <h2 className='titleBox_intro_title subtitle'>Potenciamos el impacto social de las empresas</h2>
-        <p className=' titleBox_intro_title_text text'>En nuestra plataforma gratiuta encontrás ong alineadas con los objetivos de sostenibilidad de tu emporesa. Descubre los mejores aliados, ayuda realizando compras responsables, dale una nueva vida a lo que tu empresa ya no necesite.</p>
+    <Box
+      ref={myref}
+      display={"flex"}
+      flexDirection={"column"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      className={"container-auto"}
+    >
+      <Box className={"titleBox"}>
+        <p className="titleBox_intro paragraph-s">Soy empresa</p>
+        <h2 className="titleBox_intro_title subtitle">
+          Potenciamos el impacto social de las empresas
+        </h2>
+        <p className=" titleBox_intro_title_text text">
+          En nuestra plataforma gratuita encontrarás ong alineadas con los
+          objetivos de sostenibilidad de tu empresa. Descubre los mejores
+          aliados, ayuda realizando compras responsables, dale una nueva vida a
+          lo que tu empresa ya no necesite.
+        </p>
       </Box>
-      <Box className={"boxCards"}>
+      <Box className={"box-cards-empresa"}>
         <Box className={"boxGratis"}>
-          <Box className={"boxGratis_items"} mt={"5%"}>
+          <Box className={"boxGratis_items"} mt={"15%"}>
             <h3 className={"h3 boxGratis_items_title"}>
               Proyectos con impacto
             </h3>
@@ -49,12 +64,12 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
             </Box>
           </Box>
           <Box className={"boxGratis_items"}>
-            <h3 className={"h3"}>Scrap</h3>
+            <h3 className={"h3"}>Circularidad (Scrap)</h3>
             <Box display={"flex"} textAlign={"left"} className={"boxIcon"}>
               <CheckOutlinedIcon className="check-blue" />
               <p className={"text"}>
-                Encontrar organizaciones cercanas que puedan necesitar tu scrap
-                o lo que ya no uses.
+                Encontrar organizaciones cercanas que puedan necesitar tus
+                residuos o lo que ya no uses.
               </p>
             </Box>
             <Box display={"flex"} textAlign={"left"} className={"boxIcon"}>
@@ -73,8 +88,10 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
         </Box>
 
         <Box className={"boxPago"}>
-          <Box className={"boxPago_item"}>
-            <h3 className={"boxPago_item_title"}>Voluntariado corporativo</h3>
+          <Box className={"boxPago_item"} mt={"5%"}>
+            <h3 className={"boxPago_item_title h3-w"}>
+              Voluntariado corporativo
+            </h3>
             <Box className={"boxPago_item_title_description"}>
               <Box display={"flex"} textAlign={"left"} className={"boxIcon"}>
                 <CheckOutlinedIcon className="check-white" />

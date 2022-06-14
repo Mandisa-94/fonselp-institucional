@@ -2,19 +2,86 @@
 
 
 .box-form{
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+    @include xs {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @include sm {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @include md {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @include lg {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+    @include xl {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+    @include xxl {
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
         &_img{
-            width: 40%;
-            height: auto;
-            margin-right: 10%;
+            @include xs {
+                width: 70%;
+                height: auto;
+                margin-right: 0px;
+            }
+            @include lg {
+                width: 40%;
+                height: auto;
+                margin-right: 10%;
+            }
+            @include xl {
+                width: 40%;
+                height: auto;
+                margin-right: 10%;
+            }
+            @include xxl {
+                width: 40%;
+                height: auto;
+                margin-right: 10%;
+            }
                 img{
                     width: 100%;
                 }
         }
         &_inputs{
-            width: 50%;
+            @include xs {
+                width: 90%;
+            }
+            @include sm {
+                width: 90%;
+            }
+            @include md {
+                width: 90%;
+            }
+            @include lg {
+                width: 50%;
+            }
+            @include xl {
+                width: 50%;
+            }
+            @include xxl {
+                width: 50%;
+            }
                 input{
                     width: 100%;
                     margin-bottom: 2%;

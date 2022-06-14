@@ -63,31 +63,31 @@
 .container-auto{
     @include xs  {
         height: auto;
-        margin: 2%;
+        margin: 5% 2% 0px 2%;
         flex-direction: column;
         text-align: center;
     }
     @include sm {
         height: auto;
-        margin: 2%;
+        margin: 5% 2% 0px 2%;
         flex-direction: column;
     }
     @include md {
         height: auto;
         flex-direction: column;
-        margin: 2%;
+        margin: 5% 2% 0px 2%;
     }
     @include lg {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
+        height: auto;
+        margin: 8% 2% 0px 2%;
         
     }
     @include xl {
-        height: 90vh;
-        margin: 8% 12% 0% 12%;
+        height: auto;
+        margin: 8% 10% 0% 10%;
     }
     @include xxl {
-        height: 90vh;
+        height: auto;
         margin: 6% 10% 0% 10%;
         
     }
@@ -131,19 +131,42 @@
         margin-right: 12%;
         align-items: flex-start;
     }
+    @include xxl {
+        width: 80%;
+        height: 70vh;
+        align-items: center;
+        margin-left: 12%;
+        margin-right: 12%;
+        align-items: flex-start;
+    }
     
-}
-.container-cards{
-    margin-left: 6%;
-    margin-right: 6%;
 }
 
 .titleBox {
     @include flex-center;
     flex-direction: column;
     margin-bottom: 2%;
+    @include xs  {
+        width: 100%;
+    }
+    @include sm {
+        width: 100%;
+    }
+    @include md {
+        width: 100%;
+    }
+    @include lg {
+        width: 60%;
+    }
+    @include xl {
+        width: 60%;
+    }
+    @include xxl {
+        width: 60%;
+        
+    }
         &_intro_title{
-            width: 60%;
+            width: 70%;
             margin-top: 1%;
             margin-bottom: 0.5%;
                 &_text{
@@ -152,7 +175,7 @@
         }
 }
 
-.boxCards{
+.box-cards-empresa{
     @include xs  {
         @include flex-center;
         flex-direction: column;
@@ -165,24 +188,64 @@
         height: auto;
     }
     @include md {
-        height: 100vh;
+        height: auto;
+        width: 100%;
         flex-direction: column;
-        margin: 2%;
     }
     @include lg {
         @include flex-center;
         width: 100%;
+        flex-direction: row;
         height: auto;
     }
     @include xl {
         @include flex-center;
-        width: 100%;
-        height: auto;
+        width: 90%;
+        flex-direction: row;
+        height: 90vh;
     }
     @include xxl {
         @include flex-center;
+        width: 90%;
+        flex-direction: row;
+        height: 90vh;
+    }
+}
+
+.box-cards-ong{
+    @include xs  {
+        @include flex-center;
+        flex-direction: column;
         width: 100%;
         height: auto;
+    }
+    @include sm {
+        @include flex-center;
+        width: 100%;
+        height: auto;
+    }
+    @include md {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    @include lg {
+        @include flex-center;
+        width: 100%;
+        flex-direction: row;
+        height: 70vh;
+    }
+    @include xl {
+        @include flex-center;
+        width: 90%;
+        flex-direction: row;
+        height: 70vh;
+    }
+    @include xxl {
+        @include flex-center;
+        width: 90%;
+        flex-direction: row;
+        height: 70vh;
     }
 }
 

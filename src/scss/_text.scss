@@ -68,16 +68,89 @@
 }
 
 .text{
-    font-size: map-get($font-size , texto );
     color: $secondary-color;
+    @include xs {
+        font-size: 0.8rem;
+    }
+    @include sm {
+        font-size: 0.8rem;
+    }
+    @include md {
+        font-size: 1.2rem;
+    }
+    @include lg {
+        font-size: 1rem;
+    }
+    @include xl {
+        font-size: map-get($font-size , texto );
+    }
+    @include xxl {
+        font-size: map-get($font-size , texto );
+    }
 }
 
 .text-w{
-    font-size: map-get($font-size , texto );
     color: $bg-color;
+    @include xs {
+        font-size: 0.8rem;
+    }
+    @include sm {
+        font-size: 0.8rem;
+    }
+    @include md {
+        font-size: 1.2rem;
+    }
+    @include lg {
+        font-size: map-get($font-size , texto );
+    }
+    @include xl {
+        font-size: map-get($font-size , texto );
+    }
+    @include xxl {
+        font-size: map-get($font-size , texto );
+    }
 }
 
 .h3{
-    font-size: map-get($font-size , h5 );
-    color: $primary-color;    
+    color: $primary-color; 
+    @include xs {
+        font-size: 1rem;
+    }
+    @include sm {
+        font-size: 1rem;
+    }
+    @include md {
+        font-size: 1.5rem;
+    }
+    @include lg {
+        font-size: map-get($font-size , h5 );
+    }
+    @include xl {
+        font-size: map-get($font-size , h5 );
+    }
+    @include xxl {
+        font-size: map-get($font-size , h5 );
+    }   
+}
+
+.h3-w{
+    color: $bg-color; 
+    @include xs {
+        font-size: 1rem;
+    }
+    @include sm {
+        font-size: 1rem;
+    }
+    @include md {
+        font-size: 1.5rem;
+    }
+    @include lg {
+        font-size: map-get($font-size , h5 );
+    }
+    @include xl {
+        font-size: map-get($font-size , h5 );
+    }
+    @include xxl {
+        font-size: map-get($font-size , h5 );
+    }   
 }

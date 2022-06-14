@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import UseCarousel from "./helper-components/UseCarousel";
 import "../scss/Main.scss";
@@ -30,6 +31,7 @@ const images: ImagesObj[] = [
   },
 ];
 
+// eslint-disable-next-line react/display-name
 const Alianzas = React.forwardRef((props, myref) => {
   return (
     <Box
@@ -37,8 +39,10 @@ const Alianzas = React.forwardRef((props, myref) => {
       display="flex"
       flexDirection={"column"}
       textAlign={"center"}
-      alignItems={"flex-start"}
-      className={"container"}
+      justifyContent={'center'}
+      alignItems={'center'}
+      alignContent={'center'}
+      className={"container-auto"}
     >
       <Box className={"titleBox"}>
         <p className="titleBox_intro paragraph-s">Alianzas</p>
@@ -52,7 +56,9 @@ const Alianzas = React.forwardRef((props, myref) => {
           Conoce a las organizaciones y causas que están guiando una nueva
           generación de innovadores.
         </p>
-        <UseCarousel datos={images} />
+        <Box className="box-carousel">
+          <UseCarousel datos={images} />
+        </Box>
       </Box>
     </Box>
   );

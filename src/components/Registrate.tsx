@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from "react";
 import { Box } from "@mui/system";
 import "../scss/Main.scss";
@@ -24,7 +25,7 @@ const Registrate = () => {
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
-      className={"container"}
+      className={"container-auto"}
     >
       <Box className={"box-form"} display={"flex"}>
         <Box className={"box-form_img"}>
@@ -38,9 +39,8 @@ const Registrate = () => {
             </h2>
             <p className=" titleBox_intro_title_text text">
               Si quieres saber más sobre el voluntariado corporativo, solicitar
-              una demo o tienes alguna duda puedes llenar el formulario o
-              escribiéndonos a contacto@fonselp.org y con gusto te
-              responderemos.
+              una demo o tienes alguna duda, puedes llenar el formulario o
+              escribirnos a contacto@fonselp.org y con gusto te responderemos.
             </p>
           </Box>
           <Box
@@ -83,7 +83,8 @@ const Registrate = () => {
               placeholder="¿Qué tipo de organización eres?"
             />
             <label htmlFor="mensaje"></label>
-            <textarea id="mensaje" className="input" placeholder="Mensaje" />
+            {/* <input type="textarea" id="mensaje" className="input" placeholder="Mensaje" /> */}
+            <textarea id="mensaje" className="input" placeholder="Mensaje" cols={80} rows={8} />
             <Box>
               <button
                 onClick={handleSubmit(onSubmit)}

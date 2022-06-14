@@ -31,11 +31,11 @@ function App() {
       />
       {/* <HistoriasFonselp/> */}
       <SoyEmpresa ref = { onClickRefEmpresa }/>
-      {/* <SoyOng ref = { onClickRefOng }/> */}
-      {/* <SobreFonselp/>
+      <SoyOng ref = { onClickRefOng }/>
+      <SobreFonselp/>
       <Alianzas ref = { onClickRefAlianzas }/>
       <Registrate/>
-      <Footer 
+      {/* <Footer 
         onClickRefEmpresaOng= {onClickRefEmpresaOng}
         onClickRefEmpresa = {onClickRefEmpresa}
         onClickRefOng = {onClickRefOng}
