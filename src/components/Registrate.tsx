@@ -1,5 +1,7 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Box } from "@mui/system";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { object, string } from "yup";
 import "../scss/Main.scss";
 
 type Inputs = {
@@ -7,13 +9,17 @@ type Inputs = {
   exampleRequired: string;
 };
 
+const schema = object({
+  nombre: string().required("por favor escriba su nombre").min(6),
+});
+
 const Registrate = () => {
   const {
     register,
     handleSubmit,
     // watch,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({ resolver: yupResolver(schema), mode: "onBlur" });
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   console.log(errors);
@@ -49,7 +55,7 @@ const Registrate = () => {
             mt={"4%"}
           >
             <label htmlFor="nombre">
-              Nombre - {errors.nombre && <span>This field is required</span>}
+              <p>{errors.nombre?.message}</p>
             </label>
             <input
               type="text"
