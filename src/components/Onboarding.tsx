@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import "../scss/Main.scss";
-import { Box } from "@mui/system";
+import { useState } from "react";
+
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { Backdrop, Container, Fade, Grid, Modal } from "@mui/material";
+import { Box } from "@mui/system";
+import "../scss/Main.scss";
 
 function Onboarding({ showModal, setShowModal }) {
   const [step, setStep] = useState(1);

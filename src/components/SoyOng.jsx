@@ -1,7 +1,8 @@
 import React from "react";
+
+import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import { Box } from "@mui/material";
 import "../scss/Main.scss";
-import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 
 // eslint-disable-next-line react/display-name
 const SoyOng = React.forwardRef((props, myref) => {

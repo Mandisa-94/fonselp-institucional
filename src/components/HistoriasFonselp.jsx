@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import {
   Box,
   Card,
+  CardActionArea,
   CardContent,
   CardMedia,
-  CardActionArea,
 } from "@mui/material";
+
 import "../scss/Main.scss";
 import Onboarding from "./Onboarding";
 

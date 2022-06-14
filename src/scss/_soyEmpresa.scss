@@ -1,180 +1,180 @@
-@import './variants';
+@import "./variants";
 
-.boxGratis{
-    border: 1px solid;
-    border-color: $primary-color;
-    border-radius: 10px;
-    @include xs  {
-        width: 85%;
-        height: auto;
-        margin-right: 0%;
+.boxGratis {
+  border: 1px solid;
+  border-color: $primary-color;
+  border-radius: 10px;
+  @include xs {
+    width: 85%;
+    height: auto;
+    margin-right: 0%;
+  }
+  @include sm {
+    width: 85%;
+    height: auto;
+    margin-right: 0%;
+  }
+  @include md {
+    width: 85%;
+    height: auto;
+    margin-right: 0%;
+  }
+  @include lg {
+    width: 48%;
+    height: 38rem;
+    margin-right: 4%;
+  }
+  @include xl {
+    width: 48%;
+    height: 100%;
+    margin-right: 4%;
+  }
+  @include xxl {
+    width: 48%;
+    height: 100%;
+    margin-right: 4%;
+  }
+  &_items {
+    @include flex-center;
+    flex-direction: column;
+    @include xs {
+      margin-top: 2%;
     }
     @include sm {
-        width: 85%;
-        height: auto;
-        margin-right: 0%;
+      margin-top: 2%;
     }
     @include md {
-        width: 85%;
-        height: auto;
-        margin-right: 0%;
+      margin-top: 2%;
     }
     @include lg {
-        width: 48%;
-        height: 38rem;
-        margin-right: 4%;
+      margin-top: 2%;
     }
     @include xl {
-        width: 48%;
-        height: 100%;
-        margin-right: 4%;
+      margin-top: 2%;
     }
     @include xxl {
-        width: 48%;
-        height: 100%;
-        margin-right: 4%;
+      margin-top: 5%;
+      margin-bottom: 5%;
     }
-        &_items{
-            @include flex-center;
-            flex-direction: column;
-            @include xs  {
-                margin-top: 2%;
-            }
-            @include sm {
-                margin-top: 2%;
-            }
-            @include md {
-                margin-top: 2%;
-            }
-            @include lg {
-                margin-top: 2%;
-            }
-            @include xl {
-                margin-top: 2%;
-            }
-            @include xxl {
-                margin-top: 5%;
-                margin-bottom: 5%;
-            }
-                &_title{
-                    margin-bottom: 2%;
-                }
+    &_title {
+      margin-bottom: 2%;
+    }
+  }
+}
+
+.boxIcon {
+  width: 80%;
+  p {
+    margin-left: 1%;
+    margin-bottom: 2%;
+  }
+}
+
+.btn-gratis {
+  margin-bottom: 5%;
+  @include xs {
+    margin-top: 2%;
+  }
+  @include sm {
+    margin-top: 2%;
+  }
+  @include md {
+    margin-top: 2%;
+  }
+  @include lg {
+    margin-top: 2%;
+  }
+  @include xl {
+    margin-top: 5%;
+  }
+  @include xxl {
+    margin-top: 5%;
+  }
+}
+
+.boxPago {
+  background: $gradient-color;
+  border-radius: 10px;
+  @include xs {
+    width: 85%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  @include sm {
+    width: 85%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  @include md {
+    width: 85%;
+    height: 100%;
+    margin-top: 5%;
+  }
+  @include lg {
+    width: 48%;
+    height: 38rem;
+    margin-top: 0px;
+  }
+  @include xl {
+    width: 48%;
+    height: 100%;
+    margin-top: 0px;
+  }
+  @include xxl {
+    width: 48%;
+    height: 100%;
+    margin-top: 0px;
+  }
+  &_item {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    &_title {
+      margin-bottom: 2%;
+      &_description {
+        @include flex-center;
+        flex-direction: column;
+        p {
+          margin-left: 1%;
+          margin-bottom: 8%;
         }
+      }
+    }
+  }
 }
 
-.boxIcon{
-    width: 80%;
-        p{
-            margin-left: 1%;
-            margin-bottom: 2%;
-        }
+.btn-pago {
+  @include xs {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+  @include sm {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+  @include md {
+    margin-top: 0px;
+    margin-bottom: 8%;
+  }
+  @include lg {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+  @include xl {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+  @include xxl {
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
 }
 
-.btn-gratis{
-    margin-bottom: 5%;
-    @include xs  {
-        margin-top: 2%;
-    }
-    @include sm {
-        margin-top: 2%;
-    }
-    @include md {
-        margin-top: 2%;
-    }
-    @include lg {
-        margin-top: 2%;
-    }
-    @include xl {
-        margin-top: 5%;
-    }
-    @include xxl {
-        margin-top: 5%;
-    }
+.check-blue {
+  color: $primary-color;
 }
-
-.boxPago{
-    background: $gradient-color;
-    border-radius: 10px;
-    @include xs  {
-        width: 85%;
-        height: 100%;
-        margin-top: 5%;
-    }
-    @include sm {
-        width: 85%;
-        height: 100%;
-        margin-top: 5%;
-    }
-    @include md {
-        width: 85%;
-        height: 100%;
-        margin-top: 5%;
-    }
-    @include lg {
-        width: 48%;
-        height: 38rem;
-        margin-top: 0px;
-    }
-    @include xl {
-        width: 48%;
-        height: 100%;
-        margin-top: 0px;
-    }
-    @include xxl {
-        width: 48%;
-        height: 100%;
-        margin-top: 0px;
-    }
-        &_item{
-            height: 75%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: space-around;
-            &_title{
-                margin-bottom: 2%;
-                    &_description{
-                        @include flex-center;
-                        flex-direction: column;
-                            p{
-                                margin-left: 1%;
-                                margin-bottom: 8%;
-                            }
-                    }
-            }
-        }
-}
-
-.btn-pago{
-    @include xs  {
-        margin-top: 5%;
-        margin-bottom: 8%;
-    }
-    @include sm {
-        margin-top: 5%;
-        margin-bottom: 8%;
-    }
-    @include md {
-        margin-top: 0px;
-        margin-bottom: 8%;
-    }
-    @include lg {
-        margin-top: 5%;
-        margin-bottom: 8%;
-    }
-    @include xl {
-        margin-top: 5%;
-        margin-bottom: 8%;
-    }
-    @include xxl {
-        margin-top: 5%;
-        margin-bottom: 8%;
-    }
-}
-
-.check-blue{
-    color: $primary-color;
-}
-.check-white{
-    color: $bg-color;
+.check-white {
+  color: $bg-color;
 }

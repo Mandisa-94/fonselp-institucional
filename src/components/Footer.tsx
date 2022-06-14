@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Link, Grid, Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { Box, Container, Grid, Link } from "@mui/material";
+
 import { scrollEffect } from "../utils/helper";
 
 const Footer = ({

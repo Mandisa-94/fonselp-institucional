@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
-import React from "react";
-import "../scss/Main.scss";
 import { Box } from "@mui/material";
+import "../scss/Main.scss";
 
 function Presentation() {
   return (

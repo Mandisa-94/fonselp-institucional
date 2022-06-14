@@ -1,8 +1,6 @@
-/* eslint-disable prettier/prettier */
-import React from "react";
 import { Box } from "@mui/system";
-import "../scss/Main.scss";
 import { SubmitHandler, useForm } from "react-hook-form";
+import "../scss/Main.scss";
 
 type Inputs = {
   nombre: string;
@@ -84,7 +82,13 @@ const Registrate = () => {
             />
             <label htmlFor="mensaje"></label>
             {/* <input type="textarea" id="mensaje" className="input" placeholder="Mensaje" /> */}
-            <textarea id="mensaje" className="input" placeholder="Mensaje" cols={80} rows={8} />
+            <textarea
+              id="mensaje"
+              className="input"
+              placeholder="Mensaje"
+              cols={80}
+              rows={8}
+            />
             <Box>
               <button
                 onClick={handleSubmit(onSubmit)}

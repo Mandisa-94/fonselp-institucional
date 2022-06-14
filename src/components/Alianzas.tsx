@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import UseCarousel from "./helper-components/UseCarousel";
-import "../scss/Main.scss";
+
 import { Box } from "@mui/material";
+
+import UseCarousel from "./helper-components/UseCarousel";
+
+import "../scss/Main.scss";
 
 interface ImagesObj {
   [key: string]: any;
@@ -39,9 +42,9 @@ const Alianzas = React.forwardRef((props, myref) => {
       display="flex"
       flexDirection={"column"}
       textAlign={"center"}
-      justifyContent={'center'}
-      alignItems={'center'}
-      alignContent={'center'}
+      justifyContent={"center"}
+      alignItems={"center"}
+      alignContent={"center"}
       className={"container-auto"}
     >
       <Box className={"titleBox"}>

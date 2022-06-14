@@ -1,15 +1,14 @@
+import React from "react";
 import "./App.css";
-import Presentation from "./components/Presentation";
+
+import Alianzas from "./components/Alianzas";
 import EmpresaOng from "./components/EmpresaOng";
-import HistoriasFonselp from "./components/HistoriasFonselp";
+import NavBar from "./components/NavBar";
+import Presentation from "./components/Presentation";
+import Registrate from "./components/Registrate";
+import SobreFonselp from "./components/SobreFonselp";
 import SoyEmpresa from "./components/SoyEmpresa";
 import SoyOng from "./components/SoyOng";
-import NavBar from "./components/NavBar";
-import React from "react";
-import SobreFonselp from "./components/SobreFonselp";
-import Registrate from "./components/Registrate";
-import Alianzas from "./components/Alianzas";
-import Footer from "./components/Footer";
 
 function App() {
   const onClickRefEmpresaOng = React.useRef(null);
@@ -30,11 +29,11 @@ function App() {
         onClickRefOng={onClickRefOng}
       />
       {/* <HistoriasFonselp/> */}
-      <SoyEmpresa ref = { onClickRefEmpresa }/>
-      <SoyOng ref = { onClickRefOng }/>
-      <SobreFonselp/>
-      <Alianzas ref = { onClickRefAlianzas }/>
-      <Registrate/>
+      <SoyEmpresa ref={onClickRefEmpresa} />
+      <SoyOng ref={onClickRefOng} />
+      <SobreFonselp />
+      <Alianzas ref={onClickRefAlianzas} />
+      <Registrate />
       {/* <Footer 
         onClickRefEmpresaOng= {onClickRefEmpresaOng}
         onClickRefEmpresa = {onClickRefEmpresa}
