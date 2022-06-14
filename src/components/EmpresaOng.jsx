@@ -43,15 +43,15 @@ const EmpresaOng = React.forwardRef((props, myref) => {
         />
       </Box>
 
-      <Box alignItems={"flex-start"}>
-        <img
-          src="../assets/image-intro.png"
-          alt="Ilustracion para encuentro entre empresas y sector social"
-          className="img-intro"
-        />
-      </Box>
-    </Box>
-  );
+			<Box alignItems={'flex-start'}>
+				<img
+					src='../assets/image-intro.png'
+					alt='Ilustracion para encuentro entre empresas y sector social'
+					className='img-intro'
+				/>
+			</Box>
+		</Box>
+	);
 });
 
 export default EmpresaOng;
