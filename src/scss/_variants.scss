@@ -1,8 +1,10 @@
 //Text styles//
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
-@import "./breakpoints";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
+@import './breakpoints';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -12,256 +14,257 @@
 	font-family: 'Montserrat' !important;
 }
 
-html,body {
+html,
+body {
 	height: 100%;
 }
 
 //mixins//
 
 @mixin reset-btn {
-  appearance: inherit;
-  outline: none;
-  border-bottom-style: none;
-  border: inherit;
+	appearance: inherit;
+	outline: none;
+	border-bottom-style: none;
+	border: inherit;
 }
 
 @mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .container {
-  @include xs {
-    height: 100vh;
-    margin: 2%;
-    flex-direction: column;
-    text-align: center;
-  }
-  @include sm {
-    height: 100vh;
-    margin: 2%;
-    flex-direction: column;
-  }
-  @include md {
-    height: 100vh;
-    flex-direction: column;
-    margin: 2%;
-  }
-  @include lg {
-    height: 90vh;
-    margin: 8% 12% 0% 12%;
-  }
-  @include xl {
-    height: 90vh;
-    margin: 8% 12% 0% 12%;
-  }
-  @include xxl {
-    height: 90vh;
-    margin: 6% 10% 0% 10%;
-  }
+	@include xs {
+		height: 100vh;
+		margin: 2%;
+		flex-direction: column;
+		text-align: center;
+	}
+	@include sm {
+		height: 100vh;
+		margin: 2%;
+		flex-direction: column;
+	}
+	@include md {
+		height: 100vh;
+		flex-direction: column;
+		margin: 2%;
+	}
+	@include lg {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xl {
+		height: 90vh;
+		margin: 8% 12% 0% 12%;
+	}
+	@include xxl {
+		height: 90vh;
+		margin: 6% 10% 0% 10%;
+	}
 }
 
 .container-auto {
-  @include xs {
-    height: auto;
-    margin: 5% 2% 0px 2%;
-    flex-direction: column;
-    text-align: center;
-  }
-  @include sm {
-    height: auto;
-    margin: 5% 2% 0px 2%;
-    flex-direction: column;
-  }
-  @include md {
-    height: auto;
-    flex-direction: column;
-    margin: 5% 2% 0px 2%;
-  }
-  @include lg {
-    height: auto;
-    margin: 8% 2% 0px 2%;
-  }
-  @include xl {
-    height: auto;
-    margin: 8% 10% 0% 10%;
-  }
-  @include xxl {
-    height: auto;
-    margin: 6% 10% 0% 10%;
-  }
+	@include xs {
+		height: auto;
+		margin: 5% 2% 0px 2%;
+		flex-direction: column;
+		text-align: center;
+	}
+	@include sm {
+		height: auto;
+		margin: 5% 2% 0px 2%;
+		flex-direction: column;
+	}
+	@include md {
+		height: auto;
+		flex-direction: column;
+		margin: 5% 2% 0px 2%;
+	}
+	@include lg {
+		height: auto;
+		margin: 8% 2% 0px 2%;
+	}
+	@include xl {
+		height: auto;
+		margin: 8% 10% 0% 10%;
+	}
+	@include xxl {
+		height: auto;
+		margin: 6% 10% 0% 10%;
+	}
 }
 .container-slice {
-  @include xs {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  @include sm {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  @include md {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  @include lg {
-    width: 80%;
-    height: 70vh;
-    align-items: center;
-    align-items: flex-start;
-    margin-left: 12%;
-    margin-right: 12%;
-  }
-  @include xl {
-    width: 80%;
-    height: 70vh;
-    align-items: center;
-    margin-left: 12%;
-    margin-right: 12%;
-    align-items: flex-start;
-  }
-  @include xxl {
-    width: 80%;
-    height: 70vh;
-    align-items: center;
-    margin-left: 12%;
-    margin-right: 12%;
-    align-items: flex-start;
-  }
+	@include xs {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include sm {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include md {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	@include lg {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		align-items: flex-start;
+		margin-left: 12%;
+		margin-right: 12%;
+	}
+	@include xl {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		margin-left: 12%;
+		margin-right: 12%;
+		align-items: flex-start;
+	}
+	@include xxl {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		margin-left: 12%;
+		margin-right: 12%;
+		align-items: flex-start;
+	}
 }
 
 .titleBox {
-  @include flex-center;
-  flex-direction: column;
-  margin-bottom: 2%;
-  @include xs {
-    width: 100%;
-  }
-  @include sm {
-    width: 100%;
-  }
-  @include md {
-    width: 100%;
-  }
-  @include lg {
-    width: 60%;
-  }
-  @include xl {
-    width: 60%;
-  }
-  @include xxl {
-    width: 60%;
-  }
-  &_intro_title {
-    width: 70%;
-    margin-top: 1%;
-    margin-bottom: 0.5%;
-    &_text {
-      width: 90%;
-    }
-  }
+	@include flex-center;
+	flex-direction: column;
+	margin-bottom: 2%;
+	@include xs {
+		width: 100%;
+	}
+	@include sm {
+		width: 100%;
+	}
+	@include md {
+		width: 100%;
+	}
+	@include lg {
+		width: 100%;
+	}
+	@include xl {
+		width: 100%;
+	}
+	@include xxl {
+		width: 100%;
+	}
+	&_intro_title {
+		width: 70%;
+		margin-top: 1%;
+		margin-bottom: 0.5%;
+		&_text {
+			width: 90%;
+		}
+	}
 }
 
 .box-cards-empresa {
-  @include xs {
-    @include flex-center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-  @include sm {
-    @include flex-center;
-    width: 100%;
-    height: auto;
-  }
-  @include md {
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-  }
-  @include lg {
-    @include flex-center;
-    width: 100%;
-    flex-direction: row;
-    height: auto;
-  }
-  @include xl {
-    @include flex-center;
-    width: 90%;
-    flex-direction: row;
-    height: 90vh;
-  }
-  @include xxl {
-    @include flex-center;
-    width: 90%;
-    flex-direction: row;
-    height: 90vh;
-  }
+	@include xs {
+		@include flex-center;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	@include sm {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include md {
+		height: auto;
+		width: 100%;
+		flex-direction: column;
+	}
+	@include lg {
+		@include flex-center;
+		width: 100%;
+		flex-direction: row;
+		height: auto;
+	}
+	@include xl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 90vh;
+	}
+	@include xxl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 90vh;
+	}
 }
 
 .box-cards-ong {
-  @include xs {
-    @include flex-center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-  @include sm {
-    @include flex-center;
-    width: 100%;
-    height: auto;
-  }
-  @include md {
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-  }
-  @include lg {
-    @include flex-center;
-    width: 100%;
-    flex-direction: row;
-    height: 70vh;
-  }
-  @include xl {
-    @include flex-center;
-    width: 90%;
-    flex-direction: row;
-    height: 70vh;
-  }
-  @include xxl {
-    @include flex-center;
-    width: 90%;
-    flex-direction: row;
-    height: 70vh;
-  }
+	@include xs {
+		@include flex-center;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	@include sm {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include md {
+		height: auto;
+		width: 100%;
+		flex-direction: column;
+	}
+	@include lg {
+		@include flex-center;
+		width: 100%;
+		flex-direction: row;
+		height: 70vh;
+	}
+	@include xl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 70vh;
+	}
+	@include xxl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 70vh;
+	}
 }
 
 $font-weights: (
-  "bold": 700,
-  "semi-bold": 600,
-  "regular": 400,
-  "light": 300,
-  "extra-light": 200,
+	'bold': 700,
+	'semi-bold': 600,
+	'regular': 400,
+	'light': 300,
+	'extra-light': 200,
 );
 
 $font-size: (
-  "title": 49px,
-  "subtitle": 32px,
-  "h3": 32px,
-  "h4": 25px,
-  "h5": 20px,
-  "texto": 16px,
+	'title': 49px,
+	'subtitle': 32px,
+	'h3': 32px,
+	'h4': 25px,
+	'h5': 20px,
+	'texto': 16px,
 );
 
 //color styles//
@@ -271,7 +274,7 @@ $secondary-color: #253135;
 $bg-color: #ffffff;
 $fonselp-color: #2eabe1;
 $gradient-color: linear-gradient(
-  113.98deg,
-  #3d68e3 10.35%,
-  rgba(62, 106, 231, 0.55) 151.98%
+	113.98deg,
+	#3d68e3 10.35%,
+	rgba(62, 106, 231, 0.55) 151.98%
 );

@@ -1,89 +1,109 @@
-@import "./variants";
+@import './variants';
 
 .box-form {
-  @include xs {
-    width: 100%;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-  @include sm {
-    width: 100%;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-  @include md {
-    width: 100%;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-  @include lg {
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-  }
-  @include xl {
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-  }
-  @include xxl {
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-  }
-  &_img {
-    @include xs {
-      width: 70%;
-      height: auto;
-      margin-right: 0px;
-    }
-    @include lg {
-      width: 40%;
-      height: auto;
-      margin-right: 10%;
-    }
-    @include xl {
-      width: 40%;
-      height: auto;
-      margin-right: 10%;
-    }
-    @include xxl {
-      width: 40%;
-      height: auto;
-      margin-right: 10%;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  &_inputs {
-    @include xs {
-      width: 90%;
-    }
-    @include sm {
-      width: 90%;
-    }
-    @include md {
-      width: 90%;
-    }
-    @include lg {
-      width: 50%;
-    }
-    @include xl {
-      width: 50%;
-    }
-    @include xxl {
-      width: 50%;
-    }
-    input {
-      width: 100%;
-      margin-bottom: 2%;
-    }
-  }
+	@include xs {
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+	}
+	@include sm {
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+	}
+	@include md {
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+	}
+	@include lg {
+		width: 100%;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+	}
+	@include xl {
+		width: 100%;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+	}
+	@include xxl {
+		width: 100%;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+	}
+	&_img {
+		@include xs {
+			width: 70%;
+			height: auto;
+			margin-right: 0px;
+			margin-top: 5%;
+		}
+		@include lg {
+			width: 40%;
+			height: auto;
+			margin-right: 10%;
+			margin-top: 0px;
+		}
+		@include xl {
+			width: 40%;
+			height: auto;
+			margin-right: 10%;
+			margin-top: 0px;
+		}
+		@include xxl {
+			width: 40%;
+			height: auto;
+			margin-right: 10%;
+			margin-top: 0px;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	&_inputs {
+		@include xs {
+			width: 90%;
+		}
+		@include sm {
+			width: 90%;
+		}
+		@include md {
+			width: 90%;
+		}
+		@include lg {
+			width: 50%;
+		}
+		@include xl {
+			width: 50%;
+		}
+		@include xxl {
+			width: 50%;
+		}
+		input {
+			width: 100%;
+			@include xs {
+				margin-bottom: 5%;
+			}
+			@include sm {
+				margin-bottom: 2%;
+			}
+		}
+	}
+}
+
+.box-btn-usar-plataforma {
+	width: 100%;
+	height: auto;
+	margin-top: 5%;
+}
+
+.error {
+	color: rgb(244, 66, 66);
+	font-weight: 500;
 }

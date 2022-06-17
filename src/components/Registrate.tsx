@@ -7,10 +7,22 @@ import '../scss/Main.scss';
 type Inputs = {
 	nombre: string;
 	exampleRequired: string;
+	empresa: string;
+	email: string;
+	tipoOrganizacion: string;
+	mensaje: string;
 };
 
 const schema = object({
-	nombre: string().required('por favor escriba su nombre').min(6),
+	nombre: string().required('por favor escriba su nombre'),
+	empresa: string().required('por favor escriba el nombre de su empresa'),
+	email: string()
+		.email('el correo debe tener este formato ejemplo@correo.com')
+		.required('Por favor escriba su correo'),
+	tipoOrganizacion: string().required(
+		'Por favor indique el tipo de organización'
+	),
+	mensaje: string().required('Por favor escriba su mensaje'),
 });
 
 const Registrate = () => {
@@ -53,7 +65,7 @@ const Registrate = () => {
 						mt={'4%'}
 					>
 						<label htmlFor='nombre'>
-							<p>{errors.nombre?.message}</p>
+							<p className='error'>{errors.nombre?.message}</p>
 						</label>
 						<input
 							type='text'
@@ -64,36 +76,49 @@ const Registrate = () => {
 						/>
 
 						<label htmlFor='empresa'></label>
+						<p className='error'>{errors.empresa?.message}</p>
 						<input
 							type='text'
 							id='empresa'
 							className='input'
 							placeholder='Nombre de la empresa / Organización'
+							{...register('empresa', { required: true })}
 						/>
 						<label htmlFor='correo'></label>
+						<p className='error'>{errors.email?.message}</p>
 						<input
 							type='email'
 							id='correo'
 							className='input'
 							placeholder='Correo electrónico empresarial'
+							{...register('email', { required: true })}
 						/>
 						<label htmlFor='tipo-org'></label>
+						<p className='error'>{errors.tipoOrganizacion?.message}</p>
 						<input
 							type='text'
 							id='tipo-org'
 							className='input'
 							placeholder='¿Qué tipo de organización eres?'
+							{...register('tipoOrganizacion', { required: true })}
 						/>
 						<label htmlFor='mensaje'></label>
-						{/* <input type="textarea" id="mensaje" className="input" placeholder="Mensaje" /> */}
+						<p className='error'>{errors.mensaje?.message}</p>
 						<textarea
 							id='mensaje'
-							className='input'
+							className='input-text'
 							placeholder='Mensaje'
 							cols={80}
 							rows={8}
+							{...register('mensaje', {
+								required: true,
+								minLength: {
+									value: 4,
+									message: 'el minimo de letras es de 4',
+								},
+							})}
 						/>
-						<Box>
+						<Box className={'box-btn-usar-plataforma'}>
 							<button
 								onClick={handleSubmit(onSubmit)}
 								className='btn-usar-plataforma'
