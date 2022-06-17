@@ -3,26 +3,26 @@ import { Box } from '@mui/system';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import '../scss/Main.scss';
+import { apiCall } from '../utils/axios';
 
 type Inputs = {
-	nombre: string;
-	exampleRequired: string;
-	empresa: string;
+	contact_name: string;
+	bussiness_name: string;
 	email: string;
-	tipoOrganizacion: string;
+	type_id: string;
 	mensaje: string;
 };
 
 const schema = object({
-	nombre: string().required('por favor escriba su nombre'),
-	empresa: string().required('por favor escriba el nombre de su empresa'),
+	contact_name: string().required('Por favor escriba su contact_name'),
+	bussiness_name: string().required(
+		'Por favor escriba el nombre de su empresa'
+	),
 	email: string()
 		.email('el correo debe tener este formato ejemplo@correo.com')
 		.required('Por favor escriba su correo'),
-	tipoOrganizacion: string().required(
-		'Por favor indique el tipo de organización'
-	),
-	mensaje: string().required('Por favor escriba su mensaje'),
+	type_id: string().required('Por favor indique el tipo de organización'),
+	about_us: string().required('Por favor escriba su mensaje'),
 });
 
 const Registrate = () => {
@@ -32,7 +32,8 @@ const Registrate = () => {
 		// watch,
 		formState: { errors },
 	} = useForm<Inputs>({ resolver: yupResolver(schema), mode: 'onBlur' });
-	const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+	const onSubmit: SubmitHandler<Inputs> = data =>
+		apiCall('resgiterEntity', data, 'POST');
 
 	return (
 		<Box
@@ -64,25 +65,25 @@ const Registrate = () => {
 						flexDirection={'column'}
 						mt={'4%'}
 					>
-						<label htmlFor='nombre'>
-							<p className='error'>{errors.nombre?.message}</p>
+						<label htmlFor='contact_name'>
+							<p className='error'>{errors.contact_name?.message}</p>
 						</label>
 						<input
 							type='text'
-							id='nombre'
+							id='contact_name'
 							className='input'
 							placeholder='Nombre y apellido'
-							{...register('nombre', { required: true })}
+							{...register('contact_name', { required: true })}
 						/>
 
-						<label htmlFor='empresa'></label>
-						<p className='error'>{errors.empresa?.message}</p>
+						<label htmlFor='bussiness_name'></label>
+						<p className='error'>{errors.bussiness_name?.message}</p>
 						<input
 							type='text'
-							id='empresa'
+							id='bussiness_name'
 							className='input'
 							placeholder='Nombre de la empresa / Organización'
-							{...register('empresa', { required: true })}
+							{...register('bussiness_name', { required: true })}
 						/>
 						<label htmlFor='correo'></label>
 						<p className='error'>{errors.email?.message}</p>
@@ -94,23 +95,23 @@ const Registrate = () => {
 							{...register('email', { required: true })}
 						/>
 						<label htmlFor='tipo-org'></label>
-						<p className='error'>{errors.tipoOrganizacion?.message}</p>
+						<p className='error'>{errors.type_id?.message}</p>
 						<input
 							type='text'
 							id='tipo-org'
 							className='input'
 							placeholder='¿Qué tipo de organización eres?'
-							{...register('tipoOrganizacion', { required: true })}
+							{...register('type_id', { required: true })}
 						/>
 						<label htmlFor='mensaje'></label>
-						<p className='error'>{errors.mensaje?.message}</p>
+						<p className='error'>{errors.about_us?.message}</p>
 						<textarea
 							id='mensaje'
 							className='input-text'
 							placeholder='Mensaje'
 							cols={80}
 							rows={8}
-							{...register('mensaje', {
+							{...register('about_us', {
 								required: true,
 								minLength: {
 									value: 4,
