@@ -1,5 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Alert } from '@mui/material';
 import { Box } from '@mui/system';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import '../scss/Main.scss';
@@ -27,14 +29,18 @@ const schema = object({
 });
 
 const Registrate = () => {
+	const [res, setRes] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		// watch,
 		formState: { errors },
 	} = useForm<Inputs>({ resolver: yupResolver(schema), mode: 'onBlur' });
-	const onSubmit: SubmitHandler<Inputs> = data =>
-		apiCall('resgiterEntity', data, 'POST');
+	const onSubmit: SubmitHandler<Inputs> = async data => {
+		setRes(false);
+		await apiCall('resgiterEntity', data, 'POST');
+		setRes(true);
+	};
 
 	return (
 		<Box
@@ -43,6 +49,11 @@ const Registrate = () => {
 			alignItems={'center'}
 			className={'container-auto'}
 		>
+			{res && (
+				<Alert variant='filled' severity='error'>
+					Estas regitrado
+				</Alert>
+			)}
 			<Box className={'box-form'} display={'flex'}>
 				<Box className={'box-form_img'}>
 					<img src='../assets/image-form.png' alt='' />
