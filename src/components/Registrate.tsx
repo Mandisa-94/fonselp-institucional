@@ -11,6 +11,7 @@ type Inputs = {
 	email: string;
 	type_id: string;
 	mensaje: string;
+	about_us: string;
 };
 
 const schema = object({
