@@ -14,7 +14,7 @@ const UseCarousel = ({ datos }) => {
 		>
 			{datos?.map(data => (
 				<Box key={data.title} className={'box-carouser-img'}>
-					<img src={data.src} alt={data.title} style={{ width: '30%' }} />
+					<img src={data.src} alt={data.title} style={{ width: '50%' }} />
 				</Box>
 			))}
 		</Carousel>

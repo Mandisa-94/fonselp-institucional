@@ -21,12 +21,16 @@ function App() {
 	const onClickRefEmpresa = React.useRef(null);
 	const onClickRefOng = React.useRef(null);
 	const onClickRefAlianzas = React.useRef(null);
+	const onClickRefRegister = React.useRef(null);
+	const onClickRefFonselp = React.useRef(null);
 
 	return (
 		<>
 			<NavBar
 				onClickRefEmpresaOng={onClickRefEmpresaOng}
 				onClickRefAlianzas={onClickRefAlianzas}
+				onClickRefRegister={onClickRefRegister}
+				onClickRefFonselp={onClickRefFonselp}
 			/>
 			<Presentation />
 			<EmpresaOng
@@ -37,14 +41,24 @@ function App() {
 			{/* <HistoriasFonselp/> */}
 			<SoyEmpresa ref={onClickRefEmpresa} />
 			<SoyOng ref={onClickRefOng} />
+<<<<<<< HEAD
 			<SobreFonselp />
 			<Alianzas ref={onClickRefAlianzas} />
 			<Registrate />
+=======
+			<SobreFonselp ref={onClickRefFonselp} />
+			<Alianzas ref={onClickRefAlianzas} />
+			<Registrate ref={onClickRefRegister} />
+>>>>>>> dev
 			<Footer
 				onClickRefEmpresaOng={onClickRefEmpresaOng}
 				onClickRefEmpresa={onClickRefEmpresa}
 				onClickRefOng={onClickRefOng}
 				onClickRefAlianzas={onClickRefAlianzas}
+<<<<<<< HEAD
+=======
+				onClickRefRegister={onClickRefRegister}
+>>>>>>> dev
 			/>
 		</>
 	);

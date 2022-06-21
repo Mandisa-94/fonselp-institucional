@@ -1,10 +1,7 @@
-import React from 'react';
-
 import { Box } from '@mui/material';
-
-import UseCarousel from './helper-components/UseCarousel';
-
+import React from 'react';
 import '../scss/Main.scss';
+import UseCarousel from './helper-components/UseCarousel';
 
 interface ImagesObj {
 	[key: string]: any;
@@ -57,7 +54,7 @@ const Alianzas = React.forwardRef((props, myref) => {
 					Conoce a las organizaciones y causas que están guiando una nueva
 					generación de innovadores.
 				</p>
-				<Box className='box-carousel'>
+				<Box className='box-carousel' style={{ width: '100%' }}>
 					<UseCarousel datos={images} />
 				</Box>
 			</Box>
