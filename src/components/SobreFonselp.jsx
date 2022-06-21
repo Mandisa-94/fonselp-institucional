@@ -1,15 +1,16 @@
-import React from 'react';
 import { Box } from '@mui/system';
+import React from 'react';
 import '../scss/Main.scss';
 
-function SobreFonselp() {
+const SobreFonselp = React.forwardRef((props, myref) => {
 	return (
 		<Box
+			ref={myref}
 			display={'flex'}
 			flexDirection={'column'}
 			justifyContent={'center'}
 			alignItems={'center'}
-			className={'container'}
+			className={'container-auto'}
 		>
 			<Box className={'titleBox'}>
 				<p className='titleBox_intro paragraph-s'>Sobre fonselp</p>
@@ -20,17 +21,29 @@ function SobreFonselp() {
 			</Box>
 			<Box display={'flex'} className={'box-img'}>
 				<Box className={'box-img_sf1'}>
-					<img src='../assets/image-trust-01.png' alt='' />
+					<img
+						src='../assets/image-trust-01.png'
+						alt=''
+						className='box-img_sf1_png1'
+					/>
 				</Box>
 				<Box className={'box-img_sf2'}>
-					<img src='../assets/image-trust-02.png' alt='' />
+					<img
+						src='../assets/image-trust-02.png'
+						alt=''
+						className='box-img_sf1_png2'
+					/>
 				</Box>
 				<Box className={'box-img_sf3'}>
-					<img src='../assets/image-trust-03.png' alt='' />
+					<img
+						src='../assets/image-trust-03.png'
+						alt=''
+						className='box-img_sf1_png3'
+					/>
 				</Box>
 			</Box>
 		</Box>
 	);
-}
+});
 
 export default SobreFonselp;

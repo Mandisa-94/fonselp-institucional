@@ -1,6 +1,6 @@
-import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Box } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../../scss/Main.scss';
 
 const UseCarousel = ({ datos }) => {
@@ -13,9 +13,9 @@ const UseCarousel = ({ datos }) => {
 			// dynamicHeight
 		>
 			{datos?.map(data => (
-				<div key={data.title}>
-					<img src={data.src} alt={data.title} style={{ width: '30%' }} />
-				</div>
+				<Box key={data.title} className={'box-carouser-img'}>
+					<img src={data.src} alt={data.title} style={{ width: '50%' }} />
+				</Box>
 			))}
 		</Carousel>
 	);

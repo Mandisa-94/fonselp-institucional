@@ -1,7 +1,7 @@
-import React from 'react';
-import UseCarousel from './helper-components/UseCarousel';
-import '../scss/Main.scss';
 import { Box } from '@mui/material';
+import React from 'react';
+import '../scss/Main.scss';
+import UseCarousel from './helper-components/UseCarousel';
 
 interface ImagesObj {
 	[key: string]: any;
@@ -37,8 +37,10 @@ const Alianzas = React.forwardRef((props, myref) => {
 			display='flex'
 			flexDirection={'column'}
 			textAlign={'center'}
-			alignItems={'flex-start'}
-			className={'container'}
+			justifyContent={'center'}
+			alignItems={'center'}
+			alignContent={'center'}
+			className={'container-auto'}
 		>
 			<Box className={'titleBox'}>
 				<p className='titleBox_intro paragraph-s'>Alianzas</p>
@@ -52,7 +54,9 @@ const Alianzas = React.forwardRef((props, myref) => {
 					Conoce a las organizaciones y causas que están guiando una nueva
 					generación de innovadores.
 				</p>
-				<UseCarousel datos={images} />
+				<Box className='box-carousel' style={{ width: '100%' }}>
+					<UseCarousel datos={images} />
+				</Box>
 			</Box>
 		</Box>
 	);

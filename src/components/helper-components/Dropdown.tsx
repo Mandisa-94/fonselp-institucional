@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { Link } from '@mui/material';
 import Button from '@mui/material/Button';
+import Fade from '@mui/material/Fade';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Fade from '@mui/material/Fade';
-import { Link } from '@mui/material';
+import * as React from 'react';
 
-const Dropdown = ({ data, onClickRefAlianzas }) => {
+const Dropdown = ({ data, onClickRefAlianzas, onClickRefFonselp }) => {
 	const { title, pages } = data;
 
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -51,7 +51,10 @@ const Dropdown = ({ data, onClickRefAlianzas }) => {
 					<MenuItem key={`${page.title}-${index}`}>
 						{page.title === 'Alianzas' ? (
 							<Link
-								onClick={() => scrollEffect(onClickRefAlianzas)}
+								onClick={() => {
+									handleClose();
+									setTimeout(() => scrollEffect(onClickRefAlianzas), 100);
+								}}
 								color='inherit'
 								underline='none'
 							>
@@ -59,9 +62,10 @@ const Dropdown = ({ data, onClickRefAlianzas }) => {
 							</Link>
 						) : (
 							<Link
-								href={page.link && page.link}
-								target={page.link && '_blank'}
-								rel={page.link && 'noreferrer'}
+								onClick={() => {
+									handleClose();
+									setTimeout(() => scrollEffect(onClickRefFonselp), 100);
+								}}
 								color='inherit'
 								underline='none'
 							>

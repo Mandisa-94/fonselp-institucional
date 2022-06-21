@@ -1,24 +1,20 @@
-import React from 'react';
-import { Container, Link, Grid, Box, Typography } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { scrollEffect } from '../utils/helper';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import '../scss/Main.scss';
+import { scrollEffect } from '../utils/helper';
 
 const Footer = ({
 	onClickRefEmpresaOng,
 	onClickRefEmpresa,
 	onClickRefOng,
 	onClickRefAlianzas,
+	onClickRefRegister,
 }) => {
 	return (
-		<footer>
-			<Box
-				className='footer-container'
-				px={{ xs: 2, sm: 5 }}
-				py={{ xs: 4, sm: 5 }}
-			>
+		<footer className='footer-container'>
+			<Box px={{ xs: 2, sm: 5 }} py={{ xs: 4, sm: 5 }}>
 				<Container maxWidth='lg'>
 					<Grid container spacing={5}>
 						<Grid item xs={12} sm={6}>
@@ -80,7 +76,7 @@ const Footer = ({
 								</Link>
 							</Box>
 						</Grid>
-						<Grid item xs={12} sm={6}>
+						<Grid item xs={12} sm={6} className='footer-nav'>
 							<Box
 								marginBottom={3}
 								sx={{ display: 'flex', justifyContent: 'center' }}
@@ -122,15 +118,6 @@ const Footer = ({
 											>
 												<p style={{ marginBottom: '8px' }}>Alianzas</p>
 											</Link>
-											<Link
-												underline='none'
-												color='#FFFFFF'
-												href='/'
-												target='_blank'
-												rel='noreferrer'
-											>
-												<p style={{ marginBottom: '8px' }}>Testimonios</p>
-											</Link>
 										</Box>
 									</Grid>
 									<Grid item xs={12} sm={6}>
@@ -154,22 +141,10 @@ const Footer = ({
 											<Link
 												underline='none'
 												color='#FFFFFF'
-												href='/'
-												target='_blank'
-												rel='noreferrer'
+												onClick={() => scrollEffect(onClickRefRegister)}
+												style={{ cursor: 'pointer' }}
 											>
 												<p style={{ marginBottom: '8px' }}>Regístrate gratis</p>
-											</Link>
-											<Link
-												underline='none'
-												color='#FFFFFF'
-												href='/'
-												target='_blank'
-												rel='noreferrer'
-											>
-												<p style={{ marginBottom: '8px' }}>
-													Probar app prémium
-												</p>
 											</Link>
 										</Box>
 									</Grid>

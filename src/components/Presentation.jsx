@@ -1,12 +1,10 @@
-import React from 'react';
-import '../scss/Main.scss';
 import { Box } from '@mui/material';
+import '../scss/Main.scss';
 
 function Presentation() {
 	return (
-		// <div >
-		<Box gap={2} display='flex' mt={'8%'} className='container'>
-			<div sx={12} md={8} lg={10} xl={10}>
+		<Box display='flex' mt={'8%'} className='container'>
+			<Box className='box-title-p'>
 				<h1 className='title'>
 					Soluciones para facilitar el impacto social de las empresas
 				</h1>
@@ -16,16 +14,15 @@ function Presentation() {
 					organizaciones que están cambiando el mundo.
 				</p>
 				<button className='btn-registrate'>Registrate gratis</button>
-			</div>
-			<div sx={12} md={4} lg={2} xl={2}>
+			</Box>
+			<Box className='box-img-presentation'>
 				<img
 					src='../assets/image-hero.png'
 					alt=' Ilustracion para soluciones que facilitan el impacto social de las empresas'
-					className='img-hero'
+					className='box-img-presentation_img-hero'
 				/>
-			</div>
+			</Box>
 		</Box>
-		// </div>
 	);
 }
 

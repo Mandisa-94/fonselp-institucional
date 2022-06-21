@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
 @import './breakpoints';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -12,7 +14,8 @@
 	font-family: 'Montserrat' !important;
 }
 
-html,body {
+html,
+body {
 	height: 100%;
 }
 
@@ -66,30 +69,30 @@ html,body {
 .container-auto {
 	@include xs {
 		height: auto;
-		margin: 2%;
+		margin: 5% 2% 0px 2%;
 		flex-direction: column;
 		text-align: center;
 	}
 	@include sm {
 		height: auto;
-		margin: 2%;
+		margin: 5% 2% 0px 2%;
 		flex-direction: column;
 	}
 	@include md {
 		height: auto;
 		flex-direction: column;
-		margin: 2%;
+		margin: 5% 2% 0px 2%;
 	}
 	@include lg {
-		height: 90vh;
-		margin: 8% 12% 0% 12%;
+		height: auto;
+		margin: 8% 2% 0px 2%;
 	}
 	@include xl {
-		height: 90vh;
-		margin: 8% 12% 0% 12%;
+		height: auto;
+		margin: 8% 10% 0% 10%;
 	}
 	@include xxl {
-		height: 90vh;
+		height: auto;
 		margin: 6% 10% 0% 10%;
 	}
 }
@@ -131,18 +134,40 @@ html,body {
 		margin-right: 12%;
 		align-items: flex-start;
 	}
-}
-.container-cards {
-	margin-left: 6%;
-	margin-right: 6%;
+	@include xxl {
+		width: 80%;
+		height: 70vh;
+		align-items: center;
+		margin-left: 12%;
+		margin-right: 12%;
+		align-items: flex-start;
+	}
 }
 
 .titleBox {
 	@include flex-center;
 	flex-direction: column;
 	margin-bottom: 2%;
+	@include xs {
+		width: 100%;
+	}
+	@include sm {
+		width: 100%;
+	}
+	@include md {
+		width: 100%;
+	}
+	@include lg {
+		width: 100%;
+	}
+	@include xl {
+		width: 100%;
+	}
+	@include xxl {
+		width: 100%;
+	}
 	&_intro_title {
-		width: 60%;
+		width: 70%;
 		margin-top: 1%;
 		margin-bottom: 0.5%;
 		&_text {
@@ -151,7 +176,7 @@ html,body {
 	}
 }
 
-.boxCards {
+.box-cards-empresa {
 	@include xs {
 		@include flex-center;
 		flex-direction: column;
@@ -164,24 +189,64 @@ html,body {
 		height: auto;
 	}
 	@include md {
-		height: 100vh;
+		height: auto;
+		width: 100%;
 		flex-direction: column;
-		margin: 2%;
 	}
 	@include lg {
 		@include flex-center;
 		width: 100%;
+		flex-direction: row;
 		height: auto;
 	}
 	@include xl {
 		@include flex-center;
-		width: 100%;
-		height: auto;
+		width: 90%;
+		flex-direction: row;
+		height: 90vh;
 	}
 	@include xxl {
 		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 90vh;
+	}
+}
+
+.box-cards-ong {
+	@include xs {
+		@include flex-center;
+		flex-direction: column;
 		width: 100%;
 		height: auto;
+	}
+	@include sm {
+		@include flex-center;
+		width: 100%;
+		height: auto;
+	}
+	@include md {
+		height: auto;
+		width: 100%;
+		flex-direction: column;
+	}
+	@include lg {
+		@include flex-center;
+		width: 100%;
+		flex-direction: row;
+		height: 70vh;
+	}
+	@include xl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 70vh;
+	}
+	@include xxl {
+		@include flex-center;
+		width: 90%;
+		flex-direction: row;
+		height: 70vh;
 	}
 }
 

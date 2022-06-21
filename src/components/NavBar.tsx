@@ -1,23 +1,28 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import Dropdown from './helper-components/Dropdown';
+import StarBorder from '@mui/icons-material/StarBorder';
 import {
+	Collapse,
 	Drawer,
 	Link,
+	List,
 	ListItem,
 	ListItemButton,
+	ListItemIcon,
 	ListItemText,
 } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 import { scrollEffect } from '../utils/helper';
+import Dropdown from './helper-components/Dropdown';
 
 interface PagesObj {
 	[key: string]: any;
@@ -33,7 +38,7 @@ const colabora: Section = {
 	pages: [
 		{
 			title: 'Voluntariado',
-			link: 'https://www.civic.house/contact',
+			link: 'https://civichouse.fonselp.org/',
 		},
 		{
 			title: 'Donar',
@@ -53,15 +58,22 @@ const acercaDe: Section = {
 			title: 'Alianzas',
 			link: '',
 		},
-		{
-			title: 'Testimonios',
-			link: '',
-		},
 	],
 };
 
-const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
+const NavBar = ({
+	onClickRefEmpresaOng,
+	onClickRefAlianzas,
+	onClickRefRegister,
+	onClickRefFonselp,
+}) => {
 	const [state, setState] = React.useState(false);
+	const [openCollapse, setOpenCollapse] = React.useState(true);
+
+	const handleClickCollapse = () => {
+		setOpenCollapse(!openCollapse);
+	};
+
 	const toggleDrawer = () => {
 		setState(!state);
 	};
@@ -113,13 +125,48 @@ const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
 									<ListItemText primary='¿Cómo funciona?' />
 								</ListItemButton>
 							</ListItem>
+							<ListItem>
+								<ListItemButton onClick={handleClickCollapse}>
+									<ListItemText primary='Acerca de' />
+									{openCollapse ? <ExpandLess /> : <ExpandMore />}
+								</ListItemButton>
+							</ListItem>
+							<Collapse in={openCollapse} timeout='auto' unmountOnExit>
+								<List component='div' disablePadding>
+									<ListItemButton
+										sx={{ pl: 4 }}
+										onClick={() => {
+											toggleDrawer();
+											setTimeout(() => scrollEffect(onClickRefFonselp), 100);
+										}}
+									>
+										<ListItemIcon>
+											<StarBorder />
+										</ListItemIcon>
+										<ListItemText primary='Fonselp' />
+									</ListItemButton>
+									<ListItemButton
+										sx={{ pl: 4 }}
+										onClick={() => {
+											toggleDrawer();
+											setTimeout(() => scrollEffect(onClickRefAlianzas), 100);
+										}}
+									>
+										<ListItemIcon>
+											<GroupsRoundedIcon />
+										</ListItemIcon>
+										<ListItemText primary='Alianzas' />
+									</ListItemButton>
+								</List>
+							</Collapse>
 							<ListItem
 								onClick={() => {
 									toggleDrawer();
+									setTimeout(() => scrollEffect(onClickRefRegister), 100);
 								}}
 							>
 								<ListItemButton>
-									<ListItemText primary='Acerca de' />
+									<ListItemText primary='Registrarme' />
 								</ListItemButton>
 							</ListItem>
 							<ListItem
@@ -179,7 +226,11 @@ const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
 							¿Cómo funciona?
 						</Button>
 
-						<Dropdown data={acercaDe} onClickRefAlianzas={onClickRefAlianzas} />
+						<Dropdown
+							data={acercaDe}
+							onClickRefAlianzas={onClickRefAlianzas}
+							onClickRefFonselp={onClickRefFonselp}
+						/>
 
 						<Button
 							sx={{
@@ -209,9 +260,8 @@ const NavBar = ({ onClickRefEmpresaOng, onClickRefAlianzas }) => {
 							<Link
 								underline='none'
 								color='inherit'
-								href='https://app.fonselp.com/sumarse#form'
-								target='_blank'
-								rel='noreferrer'
+								onClick={() => scrollEffect(onClickRefRegister)}
+								style={{ cursor: 'pointer' }}
 							>
 								Regístrate gratis
 							</Link>
