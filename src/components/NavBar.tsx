@@ -3,6 +3,8 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import StarBorder from '@mui/icons-material/StarBorder';
+import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
+import WorkspacePremiumRoundedIcon from '@mui/icons-material/WorkspacePremiumRounded';
 import {
 	Collapse,
 	Drawer,
@@ -68,15 +70,17 @@ const NavBar = ({
 	onClickRefFonselp,
 }) => {
 	const [state, setState] = React.useState(false);
-	const [openCollapse, setOpenCollapse] = React.useState(true);
+	const [openCollapse, setOpenCollapse] = React.useState({});
 
-	const handleClickCollapse = () => {
-		setOpenCollapse(!openCollapse);
+	const handleClickCollapse = id => {
+		setOpenCollapse(prevState => ({ ...prevState, [id]: !prevState[id] }));
 	};
 
 	const toggleDrawer = () => {
-		setState(!state);
+		setState(prevState => !prevState);
 	};
+
+	console.log(openCollapse);
 
 	return (
 		<AppBar position='static' sx={{ backgroundColor: '#F9FAFC' }}>
@@ -112,6 +116,7 @@ const NavBar = ({
 								sx: {
 									background: 'linear-gradient(#3D68E3, rgba(62, 106, 231))',
 									color: 'white',
+									width: '40%',
 								},
 							}}
 						>
@@ -126,13 +131,13 @@ const NavBar = ({
 								</ListItemButton>
 							</ListItem>
 							<ListItem>
-								<ListItemButton onClick={handleClickCollapse}>
+								<ListItemButton onClick={() => handleClickCollapse(1)}>
 									<ListItemText primary='Acerca de' />
-									{openCollapse ? <ExpandLess /> : <ExpandMore />}
+									{openCollapse[1] ? <ExpandLess /> : <ExpandMore />}
 								</ListItemButton>
 							</ListItem>
-							<Collapse in={openCollapse} timeout='auto' unmountOnExit>
-								<List component='div' disablePadding>
+							<Collapse in={openCollapse[1]} timeout='auto' unmountOnExit>
+								<List key={1} component='div' disablePadding>
 									<ListItemButton
 										sx={{ pl: 4 }}
 										onClick={() => {
@@ -141,7 +146,7 @@ const NavBar = ({
 										}}
 									>
 										<ListItemIcon>
-											<StarBorder />
+											<StarBorder sx={{ color: 'white' }} />
 										</ListItemIcon>
 										<ListItemText primary='Fonselp' />
 									</ListItemButton>
@@ -153,22 +158,52 @@ const NavBar = ({
 										}}
 									>
 										<ListItemIcon>
-											<GroupsRoundedIcon />
+											<GroupsRoundedIcon sx={{ color: 'white' }} />
 										</ListItemIcon>
 										<ListItemText primary='Alianzas' />
 									</ListItemButton>
 								</List>
 							</Collapse>
-							<ListItem
-								onClick={() => {
-									toggleDrawer();
-									setTimeout(() => scrollEffect(onClickRefRegister), 100);
-								}}
-							>
-								<ListItemButton>
-									<ListItemText primary='Registrarme' />
+							<ListItem>
+								<ListItemButton onClick={() => handleClickCollapse(2)}>
+									<ListItemText primary='Colabora' />
+									{openCollapse[2] ? <ExpandLess /> : <ExpandMore />}
 								</ListItemButton>
 							</ListItem>
+							<Collapse in={openCollapse[2]} timeout='auto' unmountOnExit>
+								<List key={2} component='div' disablePadding>
+									<ListItemButton sx={{ pl: 4 }}>
+										<ListItemIcon>
+											<WorkspacePremiumRoundedIcon sx={{ color: 'white' }} />
+										</ListItemIcon>
+										<Link
+											className='navbar-burguer'
+											underline='none'
+											color='inherit'
+											href='https://www.idealist.org/es/ong/789953ec14f444acb11f2614d342320e-fonselporg-dcv'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<ListItemText primary='Voluntariado' />
+										</Link>
+									</ListItemButton>
+									<ListItemButton sx={{ pl: 4 }}>
+										<ListItemIcon>
+											<VolunteerActivismRoundedIcon sx={{ color: 'white' }} />
+										</ListItemIcon>
+										<Link
+											className='navbar-burguer'
+											underline='none'
+											color='inherit'
+											href='https://donaronline.org/fonselp-org/suma-tu-apoyo-tu-aporte-a-fonselp-nos-ayuda-a-generar-que-mas-instituciones-se-sumen-a-colaborar-con-sus-propias-comunidades'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<ListItemText primary='Donar' />
+										</Link>
+									</ListItemButton>
+								</List>
+							</Collapse>
 							<ListItem
 								onClick={() => {
 									toggleDrawer();
@@ -185,6 +220,29 @@ const NavBar = ({
 									>
 										<ListItemText primary='Iniciar sesión' />
 									</Link>
+								</ListItemButton>
+							</ListItem>
+							<ListItem
+								onClick={() => {
+									toggleDrawer();
+									setTimeout(() => scrollEffect(onClickRefRegister), 100);
+								}}
+								sx={{
+									width: '60%',
+								}}
+							>
+								<ListItemButton
+									sx={{
+										background: 'white',
+										color: '#3D68E3',
+										borderRadius: '15px',
+										boxShadow:
+											'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+										textAlign: 'center',
+										cursor: 'pointer',
+									}}
+								>
+									<ListItemText primary='Registrarme' />
 								</ListItemButton>
 							</ListItem>
 						</Drawer>
