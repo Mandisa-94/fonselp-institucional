@@ -11,7 +11,7 @@ import {
 	ListItem,
 	ListItemButton,
 	ListItemIcon,
-	ListItemText
+	ListItemText,
 } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -38,7 +38,7 @@ const colabora: Section = {
 	pages: [
 		{
 			title: 'Voluntariado',
-			link: 'https://civichouse.fonselp.org/',
+			link: 'https://www.idealist.org/es/ong/789953ec14f444acb11f2614d342320e-fonselporg-dcv',
 		},
 		{
 			title: 'Donar',
@@ -267,7 +267,11 @@ const NavBar = ({
 							</Link>
 						</Button>
 
-						<Dropdown data={colabora} onClickRefAlianzas={onClickRefAlianzas} onClickRefFonselp={onClickRefFonselp} />
+						<Dropdown
+							data={colabora}
+							onClickRefAlianzas={onClickRefAlianzas}
+							onClickRefFonselp={onClickRefFonselp}
+						/>
 					</Box>
 				</Toolbar>
 			</Container>

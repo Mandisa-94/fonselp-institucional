@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Alianzas from './components/Alianzas';
 import EmpresaOng from './components/EmpresaOng';
@@ -24,6 +24,8 @@ function App() {
 	const onClickRefRegister = React.useRef(null);
 	const onClickRefFonselp = React.useRef(null);
 
+	const [demo, setDemo] = useState(false);
+
 	return (
 		<>
 			<NavBar
@@ -32,33 +34,34 @@ function App() {
 				onClickRefRegister={onClickRefRegister}
 				onClickRefFonselp={onClickRefFonselp}
 			/>
-			<Presentation />
+			<Presentation onClickRefRegister={onClickRefRegister} />
 			<EmpresaOng
 				ref={onClickRefEmpresaOng}
 				onClickRefEmpresa={onClickRefEmpresa}
 				onClickRefOng={onClickRefOng}
 			/>
 			{/* <HistoriasFonselp/> */}
-			<SoyEmpresa ref={onClickRefEmpresa} />
-			<SoyOng ref={onClickRefOng} />
-<<<<<<< HEAD
+			<SoyEmpresa
+				ref={onClickRefEmpresa}
+				onClickRefRegister={onClickRefRegister}
+				setDemo={setDemo}
+			/>
+			<SoyOng
+				ref={onClickRefOng}
+				onClickRefRegister={onClickRefRegister}
+				setDemo={setDemo}
+			/>
 			<SobreFonselp />
 			<Alianzas ref={onClickRefAlianzas} />
-			<Registrate />
-=======
-			<SobreFonselp ref={onClickRefFonselp} />
-			<Alianzas ref={onClickRefAlianzas} />
-			<Registrate ref={onClickRefRegister} />
->>>>>>> dev
+			{/* <Registrate /> */}
+			{/* <Alianzas ref={onClickRefAlianzas} /> */}
+			<Registrate ref={onClickRefRegister} demo={demo} />
 			<Footer
 				onClickRefEmpresaOng={onClickRefEmpresaOng}
 				onClickRefEmpresa={onClickRefEmpresa}
 				onClickRefOng={onClickRefOng}
 				onClickRefAlianzas={onClickRefAlianzas}
-<<<<<<< HEAD
-=======
 				onClickRefRegister={onClickRefRegister}
->>>>>>> dev
 			/>
 		</>
 	);

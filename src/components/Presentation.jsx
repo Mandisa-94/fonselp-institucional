@@ -1,9 +1,11 @@
 import { Box } from '@mui/material';
+import React from 'react';
 import '../scss/Main.scss';
+import { scrollEffect } from '../utils/helper';
 
-function Presentation() {
+const Presentation = React.forwardRef((props, myref) => {
 	return (
-		<Box display='flex' mt={'8%'} className='container'>
+		<Box ref={myref} display='flex' mt={'8%'} className='container'>
 			<Box className='box-title-p'>
 				<h1 className='title'>
 					Soluciones para facilitar el impacto social de las empresas
@@ -13,7 +15,14 @@ function Presentation() {
 					responsables, compartir el conocimiento de tus equipos, o conectar con
 					organizaciones que están cambiando el mundo.
 				</p>
-				<button className='btn-registrate'>Registrate gratis</button>
+				<button
+					className='btn-registrate'
+					onClick={() => {
+						setTimeout(() => scrollEffect(props.onClickRefRegister), 100);
+					}}
+				>
+					Registrate gratis
+				</button>
 			</Box>
 			<Box className='box-img-presentation'>
 				<img
@@ -24,6 +33,6 @@ function Presentation() {
 			</Box>
 		</Box>
 	);
-}
+});
 
 export default Presentation;

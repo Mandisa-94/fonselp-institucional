@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Alert } from '@mui/material';
 import { Box } from '@mui/system';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import '../scss/Main.scss';
@@ -28,7 +28,7 @@ const schema = object({
 	about_us: string().required('Por favor escriba su mensaje'),
 });
 
-const Registrate = () => {
+const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 	const [res, setRes] = useState(false);
 	const {
 		register,
@@ -44,6 +44,7 @@ const Registrate = () => {
 
 	return (
 		<Box
+			ref={myref}
 			display={'flex'}
 			justifyContent={'center'}
 			alignItems={'center'}
@@ -121,6 +122,7 @@ const Registrate = () => {
 							id='mensaje'
 							className='input-text'
 							placeholder='Mensaje'
+							defaultValue={demo ? 'Quiero solicitar una demo' : ''}
 							cols={80}
 							rows={8}
 							{...register('about_us', {
@@ -144,6 +146,6 @@ const Registrate = () => {
 			</Box>
 		</Box>
 	);
-};
+});
 
 export default Registrate;
