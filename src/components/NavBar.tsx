@@ -116,7 +116,7 @@ const NavBar = ({
 								sx: {
 									background: 'linear-gradient(#3D68E3, rgba(62, 106, 231))',
 									color: 'white',
-									width: '40%',
+									width: '65%',
 								},
 							}}
 						>
@@ -233,6 +233,7 @@ const NavBar = ({
 							>
 								<ListItemButton
 									sx={{
+										padding: '2% 0px 2% 0px',
 										background: 'white',
 										color: '#3D68E3',
 										borderRadius: '15px',

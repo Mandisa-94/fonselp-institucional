@@ -51,8 +51,8 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 			className={'container-auto'}
 		>
 			{res && (
-				<Alert variant='filled' severity='error'>
-					Estas regitrado
+				<Alert variant='filled' severity='success'>
+					Registro exitoso
 				</Alert>
 			)}
 			<Box className={'box-form'} display={'flex'}>
@@ -68,7 +68,7 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 						<p className=' titleBox_intro_title_text text'>
 							Si quieres saber más sobre el voluntariado corporativo, solicitar
 							una demo o tienes alguna duda, puedes llenar el formulario o
-							escribirnos a contacto@fonselp.org y con gusto te responderemos.
+							escribirnos a info@fonselp.org y con gusto te responderemos.
 						</p>
 					</Box>
 					<Box
