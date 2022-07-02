@@ -50,11 +50,6 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 			alignItems={'center'}
 			className={'container-auto'}
 		>
-			{res && (
-				<Alert variant='filled' severity='success'>
-					Registro exitoso
-				</Alert>
-			)}
 			<Box className={'box-form'} display={'flex'}>
 				<Box className={'box-form_img'}>
 					<img src='../assets/image-form.png' alt='' />
@@ -141,6 +136,13 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 								Registrarme gratis
 							</button>
 						</Box>
+						{res && (
+							<Box mt={'5%'}>
+								<Alert variant='filled' severity='success'>
+									Registro exitoso
+								</Alert>
+							</Box>
+						)}
 					</Box>
 				</Box>
 			</Box>
