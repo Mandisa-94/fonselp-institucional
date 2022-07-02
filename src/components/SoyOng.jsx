@@ -54,9 +54,9 @@ const SoyOng = React.forwardRef((props, myref) => {
 							</p>
 						</Box>
 					</Box>
-					<Box>
+					<Box className='box-btn-omg'>
 						<button
-							className={'btn-usar-plataforma btn-gratis'}
+							className={'btn-usar-plataforma box-btn-omg_gratis'}
 							onClick={() => {
 								setTimeout(() => scrollEffect(props.onClickRefRegister), 100);
 							}}
@@ -85,9 +85,9 @@ const SoyOng = React.forwardRef((props, myref) => {
 							<p className={'text-w'}>Obtener reportes detallados.</p>
 						</Box>
 					</Box>
-					<Box>
+					<Box className='box-btn-omg'>
 						<button
-							className={'btn-usar-plataforma_blue btn-pago-ong'}
+							className={'btn-usar-plataforma_blue box-btn-omg_pago'}
 							onClick={handleDemo}
 						>
 							Comenzar prueba gratuita

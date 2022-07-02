@@ -34,7 +34,7 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
 			</Box>
 			<Box className={'box-cards-empresa'}>
 				<Box className={'boxGratis'}>
-					<Box className={'boxGratis_items'} mt={'15%'}>
+					<Box className={'boxGratis_items'}>
 						<h3 className={'h3 boxGratis_items_title'}>
 							Proyectos con impacto
 						</h3>
@@ -86,9 +86,9 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
 							</p>
 						</Box>
 					</Box>
-					<Box>
+					<Box className='box-btn-empresa'>
 						<button
-							className={'btn-usar-plataforma btn-gratis'}
+							className={'btn-usar-plataforma box-btn-empresa_gratis'}
 							onClick={() => {
 								setTimeout(() => scrollEffect(props.onClickRefRegister), 100);
 							}}
@@ -99,7 +99,7 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
 				</Box>
 
 				<Box className={'boxPago'}>
-					<Box className={'boxPago_item'} mt={'5%'}>
+					<Box className={'boxPago_item'}>
 						<h3 className={'boxPago_item_title h3-w'}>
 							Voluntariado corporativo
 						</h3>
@@ -123,9 +123,9 @@ const SoyEmpresa = React.forwardRef((props, myref) => {
 							</Box>
 						</Box>
 					</Box>
-					<Box>
+					<Box className='box-btn-empresa'>
 						<button
-							className={'btn-usar-plataforma_blue btn-pago'}
+							className={'btn-usar-plataforma_blue box-btn-empresa_pago'}
 							onClick={handleDemo}
 						>
 							Comenzar prueba gratuita

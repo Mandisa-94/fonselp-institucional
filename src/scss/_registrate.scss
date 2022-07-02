@@ -6,36 +6,42 @@
 		flex-direction: column-reverse;
 		justify-content: space-around;
 		align-items: center;
+		margin-top: 10%;
 	}
 	@include sm {
 		width: 100%;
 		flex-direction: column-reverse;
 		justify-content: space-around;
 		align-items: center;
+		margin-top: 10%;
 	}
 	@include md {
 		width: 100%;
 		flex-direction: column-reverse;
 		justify-content: space-around;
 		align-items: center;
+		margin-top: 10%;
 	}
 	@include lg {
 		width: 100%;
 		justify-content: space-around;
 		flex-direction: row;
 		align-items: center;
+		margin-top: 0px;
 	}
 	@include xl {
 		width: 100%;
 		justify-content: space-around;
 		flex-direction: row;
 		align-items: center;
+		margin-top: 0px;
 	}
 	@include xxl {
 		width: 100%;
 		justify-content: space-around;
 		flex-direction: row;
 		align-items: center;
+		margin-top: 0px;
 	}
 	&_img {
 		@include xs {

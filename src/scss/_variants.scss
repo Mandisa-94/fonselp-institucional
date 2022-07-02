@@ -69,13 +69,13 @@ body {
 .container-auto {
 	@include xs {
 		height: auto;
-		margin: 5% 2% 0px 2%;
+		margin: 5% 2% 20% 2%;
 		flex-direction: column;
 		text-align: center;
 	}
 	@include sm {
 		height: auto;
-		margin: 5% 2% 0px 2%;
+		margin: 5% 2% 20% 2%;
 		flex-direction: column;
 	}
 	@include md {
@@ -147,31 +147,64 @@ body {
 .titleBox {
 	@include flex-center;
 	flex-direction: column;
-	margin-bottom: 2%;
 	@include xs {
 		width: 100%;
+		margin-bottom: 5%;
 	}
 	@include sm {
 		width: 100%;
+		margin-bottom: 5%;
 	}
 	@include md {
 		width: 100%;
+		margin-bottom: 5%;
 	}
 	@include lg {
 		width: 100%;
+		margin-bottom: 2%;
 	}
 	@include xl {
 		width: 100%;
+		margin-bottom: 2%;
 	}
 	@include xxl {
 		width: 100%;
+		margin-bottom: 2%;
 	}
 	&_intro_title {
-		width: 70%;
+		@include xs {
+			width: 90%;
+		}
+		@include lg {
+			width: 70%;
+		}
+		@include xl {
+			width: 70%;
+		}
+		@include xxl {
+			width: 70%;
+		}
+
 		margin-top: 1%;
 		margin-bottom: 0.5%;
 		&_text {
 			width: 90%;
+			@include xs {
+				margin-top: 5%;
+				margin-bottom: 5%;
+			}
+			@include lg {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			@include xl {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			@include xxl {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
 		}
 	}
 }
@@ -203,7 +236,7 @@ body {
 		@include flex-center;
 		width: 90%;
 		flex-direction: row;
-		height: 90vh;
+		height: auto;
 	}
 	@include xxl {
 		@include flex-center;

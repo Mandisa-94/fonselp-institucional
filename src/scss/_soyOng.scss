@@ -1,114 +1,113 @@
 .boxGratisOng {
-  border: 1px solid;
-  border-color: $primary-color;
-  border-radius: 10px;
-  margin-right: 4%;
-  @include xs {
-    width: 85%;
-    height: auto;
-    margin-right: 0%;
-  }
-  @include sm {
-    width: 85%;
-    height: auto;
-    margin-right: 0%;
-  }
-  @include md {
-    width: 85%;
-    height: auto;
-    margin-right: 0%;
-  }
-  @include lg {
-    width: 48%;
-    height: 20rem;
-    margin-right: 4%;
-  }
-  @include xl {
-    width: 48%;
-    height: 20rem;
-    margin-right: 4%;
-  }
-  @include xxl {
-    width: 48%;
-    height: 24rem;
-    margin-right: 4%;
-  }
-  &_title {
-    margin-top: 10%;
-    margin-bottom: 5%;
-    &_description {
-      @include flex-center;
-      flex-direction: column;
-    }
-  }
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	flex-direction: column;
+	border: 1px solid;
+	border-color: $primary-color;
+	border-radius: 10px;
+	@include xs {
+		width: 85%;
+		height: auto;
+		margin-right: 0%;
+	}
+	@include sm {
+		width: 85%;
+		height: auto;
+		margin-right: 0%;
+	}
+	@include md {
+		width: 85%;
+		height: auto;
+		margin-right: 0%;
+	}
+	@include lg {
+		width: 48%;
+		height: 20rem;
+		margin-right: 4%;
+	}
+	@include xl {
+		width: 48%;
+		height: 20rem;
+		margin-right: 4%;
+	}
+	@include xxl {
+		width: 48%;
+		height: 24rem;
+		margin-right: 4%;
+	}
+	&_title {
+		margin-top: 10%;
+		margin-bottom: 5%;
+		&_description {
+			@include flex-center;
+			flex-direction: column;
+			margin-bottom: 2%;
+		}
+	}
 }
 
 .boxPagoOng {
-  background: $gradient-color;
-  border-radius: 10px;
-  @include xs {
-    width: 85%;
-    height: auto;
-    margin-top: 5%;
-  }
-  @include sm {
-    width: 85%;
-    height: auto;
-    margin-top: 5%;
-  }
-  @include md {
-    width: 85%;
-    height: auto;
-    margin-top: 5%;
-  }
-  @include lg {
-    width: 48%;
-    height: 20rem;
-    margin-top: 0px;
-  }
-  @include xl {
-    width: 48%;
-    height: 20rem;
-    margin-top: 0px;
-  }
-  @include xxl {
-    width: 48%;
-    height: 24rem;
-    margin-top: 0px;
-  }
-  &_title {
-    margin-top: 10%;
-    margin-bottom: 5%;
-    &_description {
-      @include flex-center;
-      flex-direction: column;
-    }
-  }
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	flex-direction: column;
+	background: $gradient-color;
+	border-radius: 10px;
+	@include xs {
+		width: 85%;
+		height: auto;
+		margin-top: 5%;
+	}
+	@include sm {
+		width: 85%;
+		height: auto;
+		margin-top: 5%;
+	}
+	@include md {
+		width: 85%;
+		height: auto;
+		margin-top: 5%;
+	}
+	@include lg {
+		width: 48%;
+		height: 20rem;
+		margin-top: 0px;
+	}
+	@include xl {
+		width: 48%;
+		height: 20rem;
+		margin-top: 0px;
+	}
+	@include xxl {
+		width: 48%;
+		height: 24rem;
+		margin-top: 0px;
+	}
+	&_title {
+		margin-top: 10%;
+		margin-bottom: 8%;
+		&_description {
+			@include flex-center;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 2%;
+		}
+	}
 }
 
-.btn-pago-ong {
-  @include xs {
-    margin-top: 2%;
-    margin-bottom: 8%;
-  }
-  @include sm {
-    margin-top: 2%;
-    margin-bottom: 8%;
-  }
-  @include md {
-    margin-top: 2%;
-    margin-bottom: 8%;
-  }
-  @include lg {
-    margin-top: 5%;
-    margin-bottom: 8%;
-  }
-  @include xl {
-    margin-top: 5%;
-    margin-bottom: 8%;
-  }
-  @include xxl {
-    margin-top: 5%;
-    margin-bottom: 8%;
-  }
+.box-btn-omg {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	flex-direction: column;
+	&_gratis,
+	&_pago {
+		margin-bottom: 4%;
+	}
 }
