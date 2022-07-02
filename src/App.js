@@ -51,7 +51,7 @@ function App() {
 				onClickRefRegister={onClickRefRegister}
 				setDemo={setDemo}
 			/>
-			<SobreFonselp />
+			<SobreFonselp ref={onClickRefFonselp} />
 			<Alianzas ref={onClickRefAlianzas} />
 			{/* <Registrate /> */}
 			{/* <Alianzas ref={onClickRefAlianzas} /> */}

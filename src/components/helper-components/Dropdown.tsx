@@ -47,33 +47,50 @@ const Dropdown = ({ data, onClickRefAlianzas, onClickRefFonselp }) => {
 				onClose={handleClose}
 				TransitionComponent={Fade}
 			>
-				{pages?.map((page, index) => (
-					<MenuItem key={`${page.title}-${index}`}>
-						{page.title === 'Alianzas' ? (
+				{pages
+					?.filter(page => page.link === '')
+					.map((page, index) => (
+						<MenuItem key={`${page.title}-${index}`}>
+							{page.title === 'Alianzas' ? (
+								<Link
+									onClick={() => {
+										handleClose();
+										setTimeout(() => scrollEffect(onClickRefAlianzas), 100);
+									}}
+									color='inherit'
+									underline='none'
+								>
+									{page.title}
+								</Link>
+							) : (
+								<Link
+									onClick={() => {
+										handleClose();
+										setTimeout(() => scrollEffect(onClickRefFonselp), 100);
+									}}
+									color='inherit'
+									underline='none'
+								>
+									{page.title}
+								</Link>
+							)}
+						</MenuItem>
+					))}
+				{pages
+					?.filter(page => page.link !== '')
+					.map((page, index) => (
+						<MenuItem key={`${page.title}-${index}`}>
 							<Link
-								onClick={() => {
-									handleClose();
-									setTimeout(() => scrollEffect(onClickRefAlianzas), 100);
-								}}
-								color='inherit'
 								underline='none'
+								color='inherit'
+								href={page.link}
+								target='_blank'
+								rel='noreferrer'
 							>
 								{page.title}
 							</Link>
-						) : (
-							<Link
-								onClick={() => {
-									handleClose();
-									setTimeout(() => scrollEffect(onClickRefFonselp), 100);
-								}}
-								color='inherit'
-								underline='none'
-							>
-								{page.title}
-							</Link>
-						)}
-					</MenuItem>
-				))}
+						</MenuItem>
+					))}
 			</Menu>
 		</div>
 	);
