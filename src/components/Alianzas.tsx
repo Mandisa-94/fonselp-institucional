@@ -10,23 +10,23 @@ interface ImagesObj {
 const images: ImagesObj[] = [
 	{
 		title: 'Mercado Libre',
-		src: '../assets/logos/mercado-libre.png',
+		src: '../assets/logos/mercado_libre_logo.svg',
 	},
 	{
 		title: 'Santander Río',
-		src: '../assets/logos/santander.png',
+		src: '../assets/logos/santander_logo.svg',
 	},
 	{
 		title: 'Grupo México',
-		src: '../assets/logos/grupo-mex.png',
+		src: '../assets/logos/grupo_mexico_logo.svg',
 	},
 	{
 		title: 'Superville',
-		src: '../assets/logos/superville.png',
+		src: '../assets/logos/supervielle_logo.svg',
 	},
 	{
 		title: 'Globant',
-		src: '../assets/logos/globant.png',
+		src: '../assets/logos/globant-logo.svg',
 	},
 ];
 
