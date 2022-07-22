@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
 	Box,
 	Card,
 	CardActionArea,
 	CardContent,
-	CardMedia
-} from "@mui/material";
+	CardMedia,
+} from '@mui/material';
 
-import "../scss/Main.scss";
-import Onboarding from "./Onboarding";
+import '../scss/Main.scss';
+import Onboarding from './Onboarding';
 
 function HistoriasFonselp() {
 	const [showModal, setShowModal] = useState(false);

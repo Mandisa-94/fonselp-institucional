@@ -1,11 +1,11 @@
-@import "./variants";
+@import './variants';
 
 .carousel .thumb img {
-  width: 100% !important;
-  height: 100% !important;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .carousel .slide img {
-  max-height: 200px;
-  width: auto;
+	max-height: 200px;
+	width: auto;
 }

@@ -113,3 +113,36 @@
 	color: rgb(244, 66, 66);
 	font-weight: 500;
 }
+
+.whatsapp_float {
+	@include xs {
+		position: fixed;
+		width: 40px;
+		height: 40px;
+		bottom: 20px;
+		right: 10px;
+		font-size: 22px;
+		background-color: #25d366;
+		color: #fff;
+		border-radius: 50px;
+		text-align: center;
+		box-shadow: 2px 2px 3px rgb(175, 174, 174);
+		z-index: 100;
+	}
+	@include lg {
+		width: 60px;
+		height: 60px;
+		bottom: 40px;
+		right: 40px;
+		font-size: 30px;
+	}
+}
+
+.whatsapp-icon {
+	@include xs {
+		margin-top: 8px;
+	}
+	@include lg {
+		margin-top: 16px;
+	}
+}

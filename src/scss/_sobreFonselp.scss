@@ -1,151 +1,151 @@
-@import "./variants";
+@import './variants';
 
 .box-img {
-  @include xs {
-    width: 80%;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  @include sm {
-    width: 80%;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  @include md {
-    width: 80%;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  @include lg {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  @include xl {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  @include xxl {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 2%;
-  }
-  &_sf1,
-  &_sf2,
-  &_sf3 {
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include xs {
-      width: 100%;
-    }
-    @include sm {
-      width: 100%;
-    }
-    @include md {
-      width: 100%;
-    }
-    @include lg {
-      width: 100%;
-    }
-    @include xl {
-      width: 100%;
-    }
-    @include xxl {
-      width: 100%;
-    }
-    &_png1,
-    &_png3 {
-      @include xs {
-        width: 70%;
-      }
-      @include sm {
-        width: 70%;
-      }
-      @include md {
-        width: 70%;
-      }
-      @include lg {
-        width: auto;
-      }
-      @include xl {
-        width: auto;
-      }
-      @include xxl {
-        width: auto;
-      }
-    }
-    &_png2 {
-      @include xs {
-        width: 90%;
-        margin-bottom: 6%;
-      }
-      @include sm {
-        width: 90%;
-        margin-bottom: 6%;
-      }
-      @include md {
-        width: 90%;
-        margin-bottom: 6%;
-      }
-      @include lg {
-        width: auto;
-        margin-bottom: 0px;
-      }
-      @include xl {
-        width: auto;
-        margin-bottom: 0px;
-      }
-      @include xxl {
-        width: auto;
-        margin-bottom: 0px;
-      }
-    }
-  }
-  &_sf2 {
-    @include xs {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    @include sm {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    @include md {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    @include lg {
-      margin-left: 10%;
-      margin-right: 4%;
-    }
-    @include xl {
-      margin-left: 10%;
-      margin-right: 4%;
-    }
-    @include xxl {
-      margin-left: 10%;
-      margin-right: 4%;
-    }
-  }
+	@include xs {
+		width: 80%;
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	@include sm {
+		width: 80%;
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	@include md {
+		width: 80%;
+		height: auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	@include lg {
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	@include xl {
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	@include xxl {
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 2%;
+	}
+	&_sf1,
+	&_sf2,
+	&_sf3 {
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include xs {
+			width: 100%;
+		}
+		@include sm {
+			width: 100%;
+		}
+		@include md {
+			width: 100%;
+		}
+		@include lg {
+			width: 100%;
+		}
+		@include xl {
+			width: 100%;
+		}
+		@include xxl {
+			width: 100%;
+		}
+		&_png1,
+		&_png3 {
+			@include xs {
+				width: 70%;
+			}
+			@include sm {
+				width: 70%;
+			}
+			@include md {
+				width: 70%;
+			}
+			@include lg {
+				width: auto;
+			}
+			@include xl {
+				width: auto;
+			}
+			@include xxl {
+				width: auto;
+			}
+		}
+		&_png2 {
+			@include xs {
+				width: 90%;
+				margin-bottom: 6%;
+			}
+			@include sm {
+				width: 90%;
+				margin-bottom: 6%;
+			}
+			@include md {
+				width: 90%;
+				margin-bottom: 6%;
+			}
+			@include lg {
+				width: auto;
+				margin-bottom: 0px;
+			}
+			@include xl {
+				width: auto;
+				margin-bottom: 0px;
+			}
+			@include xxl {
+				width: auto;
+				margin-bottom: 0px;
+			}
+		}
+	}
+	&_sf2 {
+		@include xs {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+		@include sm {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+		@include md {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+		@include lg {
+			margin-left: 10%;
+			margin-right: 4%;
+		}
+		@include xl {
+			margin-left: 10%;
+			margin-right: 4%;
+		}
+		@include xxl {
+			margin-left: 10%;
+			margin-right: 4%;
+		}
+	}
 }

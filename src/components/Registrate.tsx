@@ -4,6 +4,7 @@ import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
+import wpIcon from '../assets/icon_whatsapp.svg';
 import '../scss/Main.scss';
 import { apiCall } from '../utils/axios';
 
@@ -28,6 +29,11 @@ const schema = object({
 	about_us: string().required('Por favor escriba su mensaje'),
 });
 
+//Meta adds
+function fbq(arg0: string, arg1: string) {
+	throw new Error('Function not implemented.');
+}
+
 const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 	const [res, setRes] = useState(false);
 	const {
@@ -40,6 +46,8 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 		setRes(false);
 		await apiCall('resgiterEntity', data, 'POST');
 		setRes(true);
+		//Meta adds
+		fbq('track', 'Lead');
 	};
 
 	return (
@@ -146,6 +154,18 @@ const Registrate = React.forwardRef(({ demo }: { demo: boolean }, myref) => {
 					</Box>
 				</Box>
 			</Box>
+			<a
+				href='https://wa.me/17862737853'
+				className='whatsapp_float'
+				target='_blank'
+				rel='noopener noreferrer'
+			>
+				<img
+					src={wpIcon}
+					alt='haga click para comunicarse con Fonselp por whatsapp'
+					className='whatsapp-icon'
+				/>
+			</a>
 		</Box>
 	);
 });

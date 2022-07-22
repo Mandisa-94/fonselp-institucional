@@ -3,19 +3,11 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	settings:{
-		react: {
-			version: 'detect',
-		}
-	},
 	extends: [
 		'plugin:react/recommended',
-		"eslint:recommended",
-		'plugin:react/jsx-runtime',
 		'standard',
-		'eslint-config-prettier',
+		'plugin:prettier/recommended',
 	],
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -23,12 +15,34 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint'],
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
+	plugins: ['react'],
 	rules: {
-		"react/jsx-uses-react": "error",   
-     	"react/jsx-uses-vars": "error",
-		"no-unused-vars": "off",
-		"react/prop-types": "off",
-		"react/display-name": "off",
+		'react/react-in-jsx-scope': 'off',
+		'react/prop-types': 'off',
+		'react/self-closing-comp': 'error',
+		'import/order': [
+			'error',
+			{
+				groups: ['builtin', 'external', 'internal'],
+				pathGroups: [
+					{
+						pattern: 'react',
+						group: 'external',
+						position: 'before',
+					},
+				],
+				pathGroupsExcludedImportTypes: ['react'],
+				'newlines-between': 'always',
+				alphabetize: {
+					order: 'asc',
+					caseInsensitive: true,
+				},
+			},
+		],
 	},
 };
