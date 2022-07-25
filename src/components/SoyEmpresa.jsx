@@ -2,6 +2,7 @@ import React from 'react';
 
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 import { Box } from '@mui/material';
+
 import '../scss/Main.scss';
 import { scrollEffect } from '../utils/helper';
 

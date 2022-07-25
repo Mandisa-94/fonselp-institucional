@@ -1,10 +1,13 @@
-import { Box } from '@mui/material';
 import React from 'react';
+
+import { Box } from '@mui/material';
+
 import '../scss/Main.scss';
 import UseCarousel from './helper-components/UseCarousel';
 
 interface ImagesObj {
-	[key: string]: any;
+	title: string;
+	src: string;
 }
 
 const images: ImagesObj[] = [
@@ -30,7 +33,11 @@ const images: ImagesObj[] = [
 	},
 ];
 
-const Alianzas = React.forwardRef((props, myref) => {
+const AlianzasComponet = (
+	props: any,
+	// eslint-disable-next-line comma-dangle
+	myref: React.Ref<unknown> | undefined
+) => {
 	return (
 		<Box
 			ref={myref}
@@ -60,6 +67,8 @@ const Alianzas = React.forwardRef((props, myref) => {
 			</Box>
 		</Box>
 	);
-});
+};
+
+const Alianzas = React.forwardRef(AlianzasComponet);
 
 export default Alianzas;

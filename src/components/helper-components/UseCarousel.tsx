@@ -1,9 +1,16 @@
+import React from 'react';
+
 import { Box } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../../scss/Main.scss';
 
-const UseCarousel = ({ datos }) => {
+type DatosProps = {
+	title: string;
+	src: string;
+};
+
+const UseCarousel = ({ datos }: { datos: DatosProps[] }) => {
 	return (
 		<Carousel
 			autoPlay

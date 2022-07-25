@@ -1,9 +1,20 @@
+import React, { MutableRefObject } from 'react';
+
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
+
 import '../scss/Main.scss';
 import { scrollEffect } from '../utils/helper';
+
+type Props = {
+	onClickRefEmpresaOng: MutableRefObject<HTMLDivElement>;
+	onClickRefEmpresa: MutableRefObject<HTMLDivElement>;
+	onClickRefOng: MutableRefObject<HTMLDivElement>;
+	onClickRefAlianzas: MutableRefObject<HTMLDivElement>;
+	onClickRefRegister: MutableRefObject<HTMLDivElement>;
+};
 
 const Footer = ({
 	onClickRefEmpresaOng,
@@ -11,7 +22,7 @@ const Footer = ({
 	onClickRefOng,
 	onClickRefAlianzas,
 	onClickRefRegister,
-}) => {
+}: Props): JSX.Element => {
 	return (
 		<footer className='footer-container'>
 			<Box px={{ xs: 2, sm: 5 }} py={{ xs: 4, sm: 5 }}>
@@ -46,7 +57,7 @@ const Footer = ({
 											fontSize: '30px',
 											marginRight: '10px',
 										}}
-									></FacebookIcon>
+									/>
 								</Link>
 								<Link
 									underline='none'
@@ -61,7 +72,7 @@ const Footer = ({
 											fontSize: '30px',
 											marginRight: '10px',
 										}}
-									></TwitterIcon>
+									/>
 								</Link>
 								<Link
 									underline='none'
@@ -70,9 +81,7 @@ const Footer = ({
 									target='_blank'
 									rel='noreferrer'
 								>
-									<LinkedInIcon
-										sx={{ color: 'white', fontSize: '30px' }}
-									></LinkedInIcon>
+									<LinkedInIcon sx={{ color: 'white', fontSize: '30px' }} />
 								</Link>
 							</Box>
 						</Grid>

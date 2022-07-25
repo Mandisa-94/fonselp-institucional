@@ -1,11 +1,30 @@
+import * as React from 'react';
+
 import { Link } from '@mui/material';
 import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import * as React from 'react';
 
-const Dropdown = ({ data, onClickRefAlianzas, onClickRefFonselp }) => {
+import { scrollEffect } from '../../utils/helper';
+
+interface PagesObj {
+	title: string;
+	link: string;
+}
+
+type Section = {
+	title: string;
+	pages: PagesObj[];
+};
+
+type Props = {
+	data: Section;
+	onClickRefAlianzas: React.MutableRefObject<HTMLDivElement>;
+	onClickRefFonselp: React.MutableRefObject<HTMLDivElement>;
+};
+
+const Dropdown = ({ data, onClickRefAlianzas, onClickRefFonselp }: Props) => {
 	const { title, pages } = data;
 
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -15,13 +34,6 @@ const Dropdown = ({ data, onClickRefAlianzas, onClickRefFonselp }) => {
 	};
 	const handleClose = () => {
 		setAnchorEl(null);
-	};
-
-	const scrollEffect = targetRef => {
-		targetRef.current.scrollIntoView({
-			behavior: 'smooth',
-			block: 'start',
-		});
 	};
 
 	return (

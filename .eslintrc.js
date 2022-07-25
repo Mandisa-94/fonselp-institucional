@@ -15,13 +15,9 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	settings: {
-		react: {
-			version: 'detect',
-		},
-	},
 	plugins: ['react'],
 	rules: {
+		'linebreak-style': ['error', 'unix'],
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 'off',
 		'react/self-closing-comp': 'error',
@@ -45,4 +41,28 @@ module.exports = {
 			},
 		],
 	},
+	overrides: [
+		{
+			files: ['**/*.ts', '**/*.tsx'],
+			env: { browser: true, es6: true, node: true },
+			extends: [
+				'eslint:recommended',
+				'plugin:@typescript-eslint/eslint-recommended',
+				'plugin:@typescript-eslint/recommended',
+			],
+			globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
+			parser: '@typescript-eslint/parser',
+			parserOptions: {
+				ecmaFeatures: { jsx: true },
+				ecmaVersion: 2018,
+				sourceType: 'module',
+				project: './tsconfig.json',
+			},
+			plugins: ['@typescript-eslint'],
+			rules: {
+				'comma-dangle': ['error', 'always-multiline'],
+				'@typescript-eslint/no-explicit-any': 0,
+			},
+		},
+	],
 };

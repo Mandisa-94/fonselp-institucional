@@ -1,3 +1,5 @@
+import React, { MutableRefObject } from 'react';
+
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import GroupsRoundedIcon from '@mui/icons-material/GroupsRounded';
@@ -22,12 +24,13 @@ import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import * as React from 'react';
+
 import { scrollEffect } from '../utils/helper';
 import Dropdown from './helper-components/Dropdown';
 
 interface PagesObj {
-	[key: string]: any;
+	title: string;
+	link: string;
 }
 
 type Section = {
@@ -63,16 +66,28 @@ const acercaDe: Section = {
 	],
 };
 
+type Props = {
+	onClickRefEmpresaOng: MutableRefObject<HTMLDivElement>;
+	onClickRefFonselp: MutableRefObject<HTMLDivElement>;
+	onClickRefAlianzas: MutableRefObject<HTMLDivElement>;
+	onClickRefRegister: MutableRefObject<HTMLDivElement>;
+};
+
+interface Collapse {
+	// 👇️ key         value
+	[key: number]: boolean;
+}
+
 const NavBar = ({
 	onClickRefEmpresaOng,
 	onClickRefAlianzas,
 	onClickRefRegister,
 	onClickRefFonselp,
-}) => {
+}: Props) => {
 	const [state, setState] = React.useState(false);
-	const [openCollapse, setOpenCollapse] = React.useState({});
+	const [openCollapse, setOpenCollapse] = React.useState<Collapse>({});
 
-	const handleClickCollapse = id => {
+	const handleClickCollapse = (id: number) => {
 		setOpenCollapse(prevState => ({ ...prevState, [id]: !prevState[id] }));
 	};
 

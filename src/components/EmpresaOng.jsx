@@ -1,11 +1,11 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import { Box } from '@mui/material';
 
 import '../scss/Main.scss';
 import { scrollEffect } from '../utils/helper';
 
-const EmpresaOng = React.forwardRef((props, myref) => {
+const EmpresaOngComponent = (props, myref) => {
 	return (
 		<Box ref={myref} className='container-slice' display='flex'>
 			<Box
@@ -52,6 +52,8 @@ const EmpresaOng = React.forwardRef((props, myref) => {
 			</Box>
 		</Box>
 	);
-});
+};
+
+const EmpresaOng = forwardRef(EmpresaOngComponent);
 
 export default EmpresaOng;

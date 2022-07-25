@@ -1,4 +1,5 @@
 import { rest } from 'msw';
+
 import { token } from './token';
 
 const BASE_URL = process.env.REACT_APP_API_URL;
