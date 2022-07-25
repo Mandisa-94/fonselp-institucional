@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
@@ -6,7 +6,13 @@ import { Backdrop, Container, Fade, Grid, Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import '../scss/Main.scss';
 
-function Onboarding({ showModal, setShowModal }) {
+function Onboarding({
+	showModal,
+	setShowModal,
+}: {
+	showModal: boolean;
+	setShowModal: (arg0: boolean) => boolean;
+}) {
 	const [step, setStep] = useState(1);
 
 	function close() {
