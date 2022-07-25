@@ -3,7 +3,7 @@ import React from 'react';
 import { Box } from '@mui/system';
 import '../scss/Main.scss';
 
-const SobreFonselp = React.forwardRef((props, myref) => {
+const SobreFonselpComponent = (props, myref) => {
 	return (
 		<Box
 			ref={myref}
@@ -45,6 +45,8 @@ const SobreFonselp = React.forwardRef((props, myref) => {
 			</Box>
 		</Box>
 	);
-});
+};
+
+const SobreFonselp = React.forwardRef(SobreFonselpComponent);
 
 export default SobreFonselp;
