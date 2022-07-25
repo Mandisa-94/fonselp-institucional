@@ -17,6 +17,7 @@ type Inputs = {
 	type_id: string;
 	mensaje: string;
 	about_us: string;
+	web_profile: string;
 };
 
 const schema = object({
@@ -30,6 +31,7 @@ const schema = object({
 		.required('Por favor escriba su correo'),
 	type_id: string().required('Por favor indique el tipo de organización'),
 	about_us: string().required('Por favor escriba su mensaje'),
+	web_site: string().required('Por favor escriba su sitio web'),
 });
 
 const RegistrateComponent = (
@@ -121,6 +123,15 @@ const RegistrateComponent = (
 								className='input'
 								placeholder='¿Qué tipo de organización eres?'
 								{...register('type_id', { required: true })}
+							/>
+							<label htmlFor='sitio-org' />
+							<p className='error'>{errors.web_profile?.message}</p>
+							<input
+								type='text'
+								id='sitio-org'
+								className='input'
+								placeholder='¿Cuál es tu sitio web?'
+								{...register('web_profile', { required: true })}
 							/>
 							<label htmlFor='mensaje' />
 							<p className='error'>{errors.about_us?.message}</p>
