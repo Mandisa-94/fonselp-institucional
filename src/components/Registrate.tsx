@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Alert } from '@mui/material';
 import { Box } from '@mui/system';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 
 import wpIcon from '../assets/icon_whatsapp.svg';
@@ -19,6 +19,7 @@ type Inputs = {
 	mensaje: string;
 	about_us: string;
 	web_profile: string;
+	location: string;
 };
 
 const schema = object({
@@ -44,6 +45,7 @@ const RegistrateComponent = (
 	const {
 		register,
 		handleSubmit,
+		control,
 		// watch,
 		formState: { errors },
 	} = useForm<Inputs>({ resolver: yupResolver(schema), mode: 'onBlur' });
@@ -66,6 +68,7 @@ const RegistrateComponent = (
 		{ value: '8', label: 'Escuelas' },
 		{ value: '9', label: 'Cooperativa de trabajo' },
 	];
+
 	return (
 		<Box
 			display={'flex'}
@@ -154,40 +157,44 @@ const RegistrateComponent = (
 							/>
 							<label htmlFor='mensaje' />
 							<p className='error'>{errors.about_us?.message}</p>
-							<div className='input'>
-								<GooglePlacesAutocomplete
-									selectProps={{
-										styles: {
-											input: provided => ({
-												...provided,
-												color: 'black',
-												appearance: 'inherit',
-												outline: 'none',
-												borderBottomStyle: 'none',
-												border: 'inherit',
-
-												backgroundColor: 'none',
-												borderColor: 'none',
-											}),
-											option: provided => ({
-												...provided,
-												color: 'blue',
-												backgroundColor: 'red',
-											}),
-											singleValue: provided => ({
-												...provided,
-												appearance: 'inherit',
-												outline: 'none',
-												display: 'none',
-												borderBottomStyle: 'none',
-												border: 'inherit',
-												color: 'blue',
-											}),
-										},
-									}}
-									apiKey='AIzaSyBhRHxxf25ibvleBZsIuDPDycfn9lCLxZ0'
-								/>
-							</div>
+							<Controller
+								name='location'
+								control={control}
+								render={({ field }) => (
+									<GooglePlacesAutocomplete
+										selectProps={{
+											...field,
+											styles: {
+												input: provided => ({
+													...provided,
+													height: '40px',
+												}),
+												container: provided => ({
+													...provided,
+													width: '100%',
+													marginBottom: '5%',
+												}),
+												control: provided => ({
+													...provided,
+													background: '#ffffff',
+													appearance: 'inherit',
+													outline: 'none',
+													borderBottomStyle: 'none',
+													border: 'inherit',
+													boxShadow:
+														'1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(224, 225, 227, 0.5), inset -7px 7px 14px rgba(224, 225, 227, 0.2), inset 7px -7px 14px rgba(224, 225, 227, 0.2), inset -7px -7px 14px rgba(255, 255, 255, 0.9), inset 7px 7px 18px rgba(224, 225, 227, 0.9)',
+													borderRadius: '10px',
+													color: '#253135',
+													fontSize: '16px',
+													fontWeight: '400',
+													paddingLeft: '2%',
+												}),
+											},
+										}}
+										apiKey='AIzaSyBhRHxxf25ibvleBZsIuDPDycfn9lCLxZ0'
+									/>
+								)}
+							/>
 
 							<textarea
 								id='mensaje'

@@ -12,11 +12,11 @@ import SoyEmpresa from './components/SoyEmpresa';
 import SoyOng from './components/SoyOng';
 
 function App() {
-	if (process.env.NODE_ENV === 'development') {
-		console.log('estamos activo');
-		const { worker } = require('./mocks/browser');
-		worker.start();
-	}
+	// if (process.env.NODE_ENV === 'development') {
+	// 	console.log('estamos activo');
+	// 	const { worker } = require('./mocks/browser');
+	// 	worker.start();
+	// }
 
 	const onClickRefEmpresaOng = React.useRef(null);
 	const onClickRefEmpresa = React.useRef(null);
