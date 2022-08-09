@@ -3,6 +3,7 @@ import React, { ForwardedRef, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Alert } from '@mui/material';
 import { Box } from '@mui/system';
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 
@@ -54,6 +55,17 @@ const RegistrateComponent = (
 		fbq('track', 'Lead');
 	};
 
+	const optionsOrg = [
+		{ value: '1', label: 'ong' },
+		{ value: '2', label: 'Economía social' },
+		{ value: '3', label: 'Empresa B' },
+		{ value: '4', label: 'Empresa' },
+		{ value: '5', label: 'Universidad' },
+		{ value: '6', label: 'Otros' },
+		{ value: '7', label: 'Municipalidad' },
+		{ value: '8', label: 'Escuelas' },
+		{ value: '9', label: 'Cooperativa de trabajo' },
+	];
 	return (
 		<Box
 			display={'flex'}
@@ -96,7 +108,6 @@ const RegistrateComponent = (
 								placeholder='Nombre y apellido'
 								{...register('contact_name', { required: true })}
 							/>
-
 							<label htmlFor='bussiness_name' />
 							<p className='error'>{errors.bussiness_name?.message}</p>
 							<input
@@ -115,15 +126,23 @@ const RegistrateComponent = (
 								placeholder='Correo electrónico empresarial'
 								{...register('email', { required: true })}
 							/>
-							<label htmlFor='tipo-org' />
 							<p className='error'>{errors.type_id?.message}</p>
-							<input
-								type='text'
+							<select
 								id='tipo-org'
 								className='input'
-								placeholder='¿Qué tipo de organización eres?'
 								{...register('type_id', { required: true })}
-							/>
+							>
+								<option disabled selected>
+									Selecciona tu tipo de organizacion
+								</option>
+								{optionsOrg.map(option => {
+									return (
+										<option key={option.value} value={option.value}>
+											{option.label}
+										</option>
+									);
+								})}
+							</select>
 							<label htmlFor='web_profile' />
 							<p className='error'>{errors.web_profile?.message}</p>
 							<input
@@ -135,6 +154,41 @@ const RegistrateComponent = (
 							/>
 							<label htmlFor='mensaje' />
 							<p className='error'>{errors.about_us?.message}</p>
+							<div className='input'>
+								<GooglePlacesAutocomplete
+									selectProps={{
+										styles: {
+											input: provided => ({
+												...provided,
+												color: 'black',
+												appearance: 'inherit',
+												outline: 'none',
+												borderBottomStyle: 'none',
+												border: 'inherit',
+
+												backgroundColor: 'none',
+												borderColor: 'none',
+											}),
+											option: provided => ({
+												...provided,
+												color: 'blue',
+												backgroundColor: 'red',
+											}),
+											singleValue: provided => ({
+												...provided,
+												appearance: 'inherit',
+												outline: 'none',
+												display: 'none',
+												borderBottomStyle: 'none',
+												border: 'inherit',
+												color: 'blue',
+											}),
+										},
+									}}
+									apiKey='AIzaSyBhRHxxf25ibvleBZsIuDPDycfn9lCLxZ0'
+								/>
+							</div>
+
 							<textarea
 								id='mensaje'
 								className='input-text'

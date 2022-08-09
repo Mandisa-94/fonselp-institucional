@@ -91,15 +91,6 @@
 		@include xxl {
 			width: 50%;
 		}
-		input {
-			width: 100%;
-			@include xs {
-				margin-bottom: 5%;
-			}
-			@include sm {
-				margin-bottom: 2%;
-			}
-		}
 	}
 }
 
