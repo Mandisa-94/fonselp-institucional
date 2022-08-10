@@ -34,6 +34,7 @@ const schema = object({
 	type_id: string().required('Por favor indique el tipo de organización'),
 	about_us: string().required('Por favor escriba su mensaje'),
 	web_profile: string().required('Por favor escriba su sitio web'),
+	location: string().required('Por favor indique su locación'),
 });
 
 const RegistrateComponent = (
@@ -156,7 +157,7 @@ const RegistrateComponent = (
 								{...register('web_profile', { required: true })}
 							/>
 							<label htmlFor='mensaje' />
-							<p className='error'>{errors.about_us?.message}</p>
+							<p className='error'>{errors.location?.message}</p>
 							<Controller
 								name='location'
 								control={control}
