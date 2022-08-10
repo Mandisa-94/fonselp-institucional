@@ -37,11 +37,14 @@ const schema = object({
 	location: object().required('Por favor indique su locación'),
 });
 
+const FB = window.fbq;
+
 const RegistrateComponent = (
 	{ demo }: { demo: boolean },
 	// eslint-disable-next-line comma-dangle
 	myref: ForwardedRef<HTMLDivElement>
 ) => {
+	const [btnDisabled, setBtnDisabled] = useState(false);
 	const [res, setRes] = useState(false);
 	const {
 		register,
@@ -52,10 +55,12 @@ const RegistrateComponent = (
 	} = useForm<Inputs>({ resolver: yupResolver(schema), mode: 'onBlur' });
 	const onSubmit: SubmitHandler<Inputs> = async data => {
 		setRes(false);
+		setBtnDisabled(true);
 		await apiCall('resgiterEntity', data, 'POST');
 		setRes(true);
+		setBtnDisabled(false);
 		// Meta adds
-		fbq('track', 'Lead');
+		FB('track', 'Lead');
 	};
 
 	const optionsOrg = [
@@ -216,6 +221,7 @@ const RegistrateComponent = (
 								<button
 									onClick={handleSubmit(onSubmit)}
 									className='btn-usar-plataforma'
+									disabled={btnDisabled}
 								>
 									Registrarme gratis
 								</button>
@@ -250,7 +256,3 @@ const RegistrateComponent = (
 const Registrate = React.forwardRef(RegistrateComponent);
 
 export default Registrate;
-
-function fbq(arg0: string, arg1: string) {
-	console.log('fbq', arg0, arg1);
-}
