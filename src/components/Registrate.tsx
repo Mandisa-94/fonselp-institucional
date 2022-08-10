@@ -34,7 +34,7 @@ const schema = object({
 	type_id: string().required('Por favor indique el tipo de organización'),
 	about_us: string().required('Por favor escriba su mensaje'),
 	web_profile: string().required('Por favor escriba su sitio web'),
-	location: string().required('Por favor indique su locación'),
+	location: object().required('Por favor indique su locación'),
 });
 
 const RegistrateComponent = (
@@ -59,15 +59,23 @@ const RegistrateComponent = (
 	};
 
 	const optionsOrg = [
-		{ value: '1', label: 'ong' },
+		{ value: '1', label: 'Organización de la Sociedad Civil / ONG' },
 		{ value: '2', label: 'Economía social' },
 		{ value: '3', label: 'Empresa B' },
 		{ value: '4', label: 'Empresa' },
 		{ value: '5', label: 'Universidad' },
 		{ value: '6', label: 'Otros' },
-		{ value: '7', label: 'Municipalidad' },
+		{
+			value: '7',
+			label: 'Gobierno (Nacional, Estadual/Provincial, Municipal)',
+		},
 		{ value: '8', label: 'Escuelas' },
 		{ value: '9', label: 'Cooperativa de trabajo' },
+		{ value: '10', label: 'Grupo de voluntariado' },
+		{ value: '11', label: 'Consultoras y profesionales' },
+		{ value: '12', label: 'Empresa - Naciente' },
+		{ value: '13', label: 'Emprendedores - Idea de Negocio' },
+		{ value: '14', label: 'Empresa - Nuevo proyecto' },
 	];
 
 	return (
