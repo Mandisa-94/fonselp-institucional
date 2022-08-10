@@ -34,7 +34,7 @@ const schema = object({
 	type_id: string().required('Por favor indique el tipo de organización'),
 	about_us: string().required('Por favor escriba su mensaje'),
 	web_profile: string().required('Por favor escriba su sitio web'),
-	location: string().required('Por favor indique su locación'),
+	location: object().required('Por favor indique su locación'),
 });
 
 const RegistrateComponent = (
