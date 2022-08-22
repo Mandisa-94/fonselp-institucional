@@ -1,7 +1,7 @@
 import React, { ForwardedRef, useState } from 'react';
 
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Alert } from '@mui/material';
+import { Alert, AlertTitle, Paper } from '@mui/material';
 import { Box } from '@mui/system';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
@@ -100,140 +100,148 @@ const RegistrateComponent = (
 								responderemos.
 							</p>
 						</Box>
-						<Box
-							display={'flex'}
-							justifyContent={'center'}
-							alignItems={'center'}
-							flexDirection={'column'}
-							mt={'4%'}
-						>
-							<label htmlFor='contact_name'>
-								<p className='error'>{errors.contact_name?.message}</p>
-							</label>
-							<input
-								type='text'
-								id='contact_name'
-								className='input'
-								placeholder='Nombre y apellido'
-								{...register('contact_name', { required: true })}
-							/>
-							<label htmlFor='bussiness_name' />
-							<p className='error'>{errors.bussiness_name?.message}</p>
-							<input
-								type='text'
-								id='bussiness_name'
-								className='input'
-								placeholder='Nombre de la empresa / Organización'
-								{...register('bussiness_name', { required: true })}
-							/>
-							<label htmlFor='correo' />
-							<p className='error'>{errors.email?.message}</p>
-							<input
-								type='email'
-								id='correo'
-								className='input'
-								placeholder='Correo electrónico empresarial'
-								{...register('email', { required: true })}
-							/>
-							<p className='error'>{errors.type_id?.message}</p>
-							<select
-								id='tipo-org'
-								className='input'
-								{...register('type_id', { required: true })}
+						{res || (
+							<Box
+								display={'flex'}
+								justifyContent={'center'}
+								alignItems={'center'}
+								flexDirection={'column'}
+								mt={'4%'}
 							>
-								<option disabled selected>
-									Selecciona tu tipo de organizacion
-								</option>
-								{optionsOrg.map(option => {
-									return (
-										<option key={option.value} value={option.value}>
-											{option.label}
-										</option>
-									);
-								})}
-							</select>
-							<label htmlFor='web_profile' />
-							<p className='error'>{errors.web_profile?.message}</p>
-							<input
-								type='text'
-								id='web_profile'
-								className='input'
-								placeholder='¿Cuál es tu sitio web?'
-								{...register('web_profile', { required: true })}
-							/>
-							<label htmlFor='mensaje' />
-							<p className='error'>{errors.location?.message}</p>
-							<Controller
-								name='location'
-								control={control}
-								render={({ field }) => (
-									<GooglePlacesAutocomplete
-										selectProps={{
-											...field,
-											styles: {
-												input: provided => ({
-													...provided,
-													height: '40px',
-												}),
-												container: provided => ({
-													...provided,
-													width: '100%',
-													marginBottom: '5%',
-												}),
-												control: provided => ({
-													...provided,
-													background: '#ffffff',
-													appearance: 'inherit',
-													outline: 'none',
-													borderBottomStyle: 'none',
-													border: 'inherit',
-													boxShadow:
-														'1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(224, 225, 227, 0.5), inset -7px 7px 14px rgba(224, 225, 227, 0.2), inset 7px -7px 14px rgba(224, 225, 227, 0.2), inset -7px -7px 14px rgba(255, 255, 255, 0.9), inset 7px 7px 18px rgba(224, 225, 227, 0.9)',
-													borderRadius: '10px',
-													color: '#253135',
-													fontSize: '16px',
-													fontWeight: '400',
-													paddingLeft: '2%',
-												}),
-											},
-										}}
-										apiKey='AIzaSyBhRHxxf25ibvleBZsIuDPDycfn9lCLxZ0'
-									/>
-								)}
-							/>
-
-							<textarea
-								id='mensaje'
-								className='input-text'
-								placeholder='Mensaje'
-								defaultValue={demo ? 'Quiero solicitar una demo' : ''}
-								cols={80}
-								rows={8}
-								{...register('about_us', {
-									required: true,
-									minLength: {
-										value: 4,
-										message: 'el minimo de letras es de 4',
-									},
-								})}
-							/>
-							<Box className={'box-btn-usar-plataforma'}>
-								<button
-									onClick={handleSubmit(onSubmit)}
-									className='btn-usar-plataforma'
-									disabled={btnDisabled}
+								<label htmlFor='contact_name'>
+									<p className='error'>{errors.contact_name?.message}</p>
+								</label>
+								<input
+									type='text'
+									id='contact_name'
+									className='input'
+									placeholder='Nombre y apellido'
+									{...register('contact_name', { required: true })}
+								/>
+								<label htmlFor='bussiness_name' />
+								<p className='error'>{errors.bussiness_name?.message}</p>
+								<input
+									type='text'
+									id='bussiness_name'
+									className='input'
+									placeholder='Nombre de la empresa / Organización'
+									{...register('bussiness_name', { required: true })}
+								/>
+								<label htmlFor='correo' />
+								<p className='error'>{errors.email?.message}</p>
+								<input
+									type='email'
+									id='correo'
+									className='input'
+									placeholder='Correo electrónico empresarial'
+									{...register('email', { required: true })}
+								/>
+								<p className='error'>{errors.type_id?.message}</p>
+								<select
+									id='tipo-org'
+									className='input'
+									{...register('type_id', { required: true })}
 								>
-									Registrarme gratis
-								</button>
-							</Box>
-							{res && (
-								<Box mt={'5%'}>
-									<Alert variant='filled' severity='success'>
-										Registro exitoso
-									</Alert>
+									<option disabled selected>
+										Selecciona tu tipo de organizacion
+									</option>
+									{optionsOrg.map(option => {
+										return (
+											<option key={option.value} value={option.value}>
+												{option.label}
+											</option>
+										);
+									})}
+								</select>
+								<label htmlFor='web_profile' />
+								<p className='error'>{errors.web_profile?.message}</p>
+								<input
+									type='text'
+									id='web_profile'
+									className='input'
+									placeholder='¿Cuál es tu sitio web?'
+									{...register('web_profile', { required: true })}
+								/>
+								<label htmlFor='mensaje' />
+								<p className='error'>{errors.location?.message}</p>
+								<Controller
+									name='location'
+									control={control}
+									render={({ field }) => (
+										<GooglePlacesAutocomplete
+											selectProps={{
+												...field,
+												styles: {
+													input: provided => ({
+														...provided,
+														height: '40px',
+													}),
+													container: provided => ({
+														...provided,
+														width: '100%',
+														marginBottom: '5%',
+													}),
+													control: provided => ({
+														...provided,
+														background: '#ffffff',
+														appearance: 'inherit',
+														outline: 'none',
+														borderBottomStyle: 'none',
+														border: 'inherit',
+														boxShadow:
+															'1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(224, 225, 227, 0.5), inset -7px 7px 14px rgba(224, 225, 227, 0.2), inset 7px -7px 14px rgba(224, 225, 227, 0.2), inset -7px -7px 14px rgba(255, 255, 255, 0.9), inset 7px 7px 18px rgba(224, 225, 227, 0.9)',
+														borderRadius: '10px',
+														color: '#253135',
+														fontSize: '16px',
+														fontWeight: '400',
+														paddingLeft: '2%',
+													}),
+												},
+											}}
+											apiKey='AIzaSyBhRHxxf25ibvleBZsIuDPDycfn9lCLxZ0'
+										/>
+									)}
+								/>
+
+								<textarea
+									id='mensaje'
+									className='input-text'
+									placeholder='Mensaje'
+									defaultValue={demo ? 'Quiero solicitar una demo' : ''}
+									cols={80}
+									rows={8}
+									{...register('about_us', {
+										required: true,
+										minLength: {
+											value: 4,
+											message: 'el minimo de letras es de 4',
+										},
+									})}
+								/>
+								<Box className={'box-btn-usar-plataforma'}>
+									<button
+										onClick={handleSubmit(onSubmit)}
+										className='btn-usar-plataforma'
+										disabled={btnDisabled}
+									>
+										Registrarme gratis
+									</button>
 								</Box>
-							)}
-						</Box>
+							</Box>
+						)}
+						{res && (
+							<Paper elevation={3}>
+								<Alert variant='filled' severity='success'>
+									<AlertTitle>Registro exitoso</AlertTitle>
+								</Alert>
+								<p className='succes-message'>
+									En las próximas 48 hs recibira un mail de confirmación o un
+									representante se contactara con usted.
+									<br />
+									<br /> Gracias por querer ser parte de la comunidad Fonselp.
+								</p>
+							</Paper>
+						)}
 					</Box>
 				</Box>
 				<a
